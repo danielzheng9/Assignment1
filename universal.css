@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
     --accent-colour: rgb(167, 15, 15);
-    --opposite-accent-colour: rgb(221, 95, 95);
+    --opposite-accent-colour: rgb(69, 14, 14);
+    --opposite-accent-colour-border: rgb(151, 72, 72);
     --standard-colour: rgb(0, 0, 0);
     --contrast-colour: rgb(255, 255, 255);
+    /* --header-colour: rgb(144, 144, 144); */
 }
 header {
     background-color: var(--accent-colour);
     padding: 0.5rem 1rem;
+    display: flex;
+    vertical-align: center;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar {
+    gap: 1rem;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.navbar > button {
+    padding: 0.5rem 1rem;
+    background-color: var(--opposite-accent-colour);
+    color: var(--contrast-colour);
+    border: 1px solid var(--opposite-accent-colour-border);
+}
+.navigation {
+    background-color: grey;
+    padding: 0.5rem 1rem;
+    color: lightgrey;
+}
+.navbar > button:hover {
+    /* padding: 0.5rem 1rem; */
+    /* background-color: var(--opposite-accent-colour); */
+    /* color: var(--contrast-colour); */
+    /* border: 1px solid var(--opposite-accent-colour-border); */
+    cursor: pointer;
+    filter: brightness(120%);
 }
 header .heading_logo {
     color: var(--contrast-colour);
@@ -24,7 +56,11 @@ main {
     padding: 0.5rem 1rem;
 }
 .unique_stripe {
-    background-color: var(--opposite-accent-colour);
+    /* background-color: var(--opposite-accent-colour); */
+    color: var(--standard-colour);
+}
+p {
+    margin: 0;
 }
 h1 {
     margin: 0;
