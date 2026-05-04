@@ -14,11 +14,21 @@ header {
     display: flex;
     vertical-align: center;
     justify-content: start;
-    align-items: center;
+    align-items: stretch;
+    text-align: center;
     gap: 1rem;
+}
+header * {
+    display: flex;
+    align-items: center;
 }
 .ghost {
     color: var(--secondary-colour);
+}
+.homeStripe {
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 0.5rem 1rem;
 }
 .navbar {
     gap: 1rem;

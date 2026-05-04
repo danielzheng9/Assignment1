@@ -18,13 +18,13 @@ export function MenuBar() {
     </NavLink>
         <div className="navbar">
             <MenuButton buttonProps={{}} to="/f">404 Not Found</MenuButton>
-            <MenuButton buttonProps={{}} to="/arpanet">Hello</MenuButton>
+            <MenuButton buttonProps={{}} to="/blogs">Blogs</MenuButton>
         </div></header>
 }
 export function MenuNavLinkDisplay() {
     const appContext = useContext(AppContext);
     const location = useLocation();
-    return <div className="navigation">
+    return <>{ resourceStringMap[location.pathname] ? <div className="navigation">
             {resourceStringMap[location.pathname] ?? "Unknown Page"}
-        </div>
+        </div> : <></>}</>
 }
