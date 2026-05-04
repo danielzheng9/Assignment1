@@ -10,8 +10,8 @@ export function MenuButton({children, ...props}: MenuButtonProps) {
         {children}
     </NavLink>
 }
-export function StandardMenuButton({children, ...props}: MenuButtonProps) {
-    return <NavLink className="standardText noLink" {...props}>
+export function StandardMenuButton({children, to, ...props}: MenuButtonProps) {
+    return <NavLink className={`standardText noLink linkHover${useLocation().pathname === to ? " selected" : ""}`} to={to} {...props}>
         {children}
     </NavLink>
 }
@@ -23,14 +23,14 @@ export function MenuBar() {
         <div className="navbar">
             <div className="miniNavBarGroup">
                 <DividerBar dividerObject={<span className="thinDivider"/>}>
-                    <StandardMenuButton to="/fix_your_life">REALLY FIX your life</StandardMenuButton>
-                    <StandardMenuButton to="/fix_your_life">Fix your life</StandardMenuButton>
+                    <StandardMenuButton to="/featured_blogs">Featured Blogs</StandardMenuButton>
+                    <StandardMenuButton to="/fix_your_life">Fix Your Life</StandardMenuButton>
                     <StandardMenuButton to="/blogs">Blogs</StandardMenuButton>
                 </DividerBar>
             </div>
             <div className="miniNavBarGroup">
-                <MenuButton to="/fix_your_life">Login</MenuButton>
-                <MenuButton to="/blogs">Signup</MenuButton>
+                <MenuButton to="/login">Login</MenuButton>
+                <MenuButton to="/signup">Signup</MenuButton>
             </div>
         </div>
     </header>

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
     --accent-colour: rgb(167, 15, 15);
+    --brightest-accent-colour: rgb(212, 37, 37);
     --opposite-accent-colour: rgb(69, 14, 14);
     --opposite-accent-colour-border: rgb(151, 72, 72);
     --standard-colour: rgb(0, 0, 0);
     --contrast-colour: rgb(255, 255, 255);
     --secondary-colour: rgb(128, 128, 128);
+    --bright-grey: rgb(224, 224, 224);
     --standard-button-outline: rgb(176, 176, 176);
     --standard-button-fill: rgb(246, 246, 246);
     /* --header-colour: rgb(144, 144, 144); */
@@ -57,6 +59,9 @@ header * {
 .noLink {
     text-decoration: none;
 }
+.linkHover:not(.selected):hover {
+    text-decoration: dotted underline;
+}
 .menuButton {
     padding: 0.5rem 1rem;
     background-color: var(--opposite-accent-colour);
@@ -103,7 +108,7 @@ header * {
 }
 .blogCard {
     background-color: var(--contrast-colour);
-    border: 1px solid var(--standard-button-outline);
+    outline: 1px solid var(--standard-button-outline);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -113,8 +118,10 @@ header * {
 }
 .blogCard:hover {
     cursor: pointer;
-    border-style: dashed;
-    border-color: var(--accent-colour);
+    /* padding-top: calc(1rem - 1px); */
+    /* padding-left: calc(1rem - 1px); */
+    outline: 2px dashed var(--standard-colour);
+    /* outline-offset: -1px; */
 }
 /* .blogCard:hover > .blogTitle {
     color: var(--accent-colour);
@@ -124,6 +131,7 @@ header * {
 }
 .blogFolder {
     display: flex;
+    gap: 1rem;
     /* flex-direction: column; */
     flex-wrap: wrap;
     align-items: stretch;
@@ -167,4 +175,11 @@ h1 {
 .standardButton:hover {
     filter: brightness(90%);
     cursor: pointer;
+}
+.linkHover {
+    color: var(--bright-grey);
+}
+.linkHover.selected {
+    color: var(--contrast-colour);
+    font-weight: bold;
 }
