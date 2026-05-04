@@ -19,8 +19,8 @@ export function App() {
                 <MenuBar/>
                 <MenuNavLinkDisplay/>
                 <Routes>
-                    <Route path="/" element={<Navigate to="/home" replace />} />
-                    <Route path="/home" element={<Home/>} />
+                    {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
+                    <Route path="/" element={<Home/>} />
                     <Route path="/blogs/arpanet" element={<ArpanetPage/>} />
                     <Route path="/blogs" element={<Blogs/>} />
                     <Route path="*" element={<NotFound />} />

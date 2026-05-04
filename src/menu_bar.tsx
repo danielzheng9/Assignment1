@@ -13,7 +13,7 @@ export function MenuButton({buttonProps, children, ...props}: MenuButtonProps) {
 }
 export function MenuBar() {
     return <header>
-    <NavLink to="/home" className="heading_logo standard noLink">
+    <NavLink to="/" className="heading_logo standard noLink">
         DOGNET TECHNOLOGIES
     </NavLink>
         <div className="navbar">
@@ -24,7 +24,20 @@ export function MenuBar() {
 export function MenuNavLinkDisplay() {
     const appContext = useContext(AppContext);
     const location = useLocation();
-    return <>{ resourceStringMap[location.pathname] ? <div className="navigation">
-            {resourceStringMap[location.pathname] ?? "Unknown Page"}
-        </div> : <></>}</>
+    const pathname = location.pathname.trim();
+    const PathnameSplit = pathname.split("/").filter((path: string, index: number) => {
+        if (path.length === 0) return undefined;
+        return true;
+    });
+    if (PathnameSplit.length === 0) return <></>;
+    // return <>{ resourceStringMap[location.pathname] ? <div className="navigation">
+    //         {resourceStringMap[location.pathname] ?? "Unknown Page"}
+    //     </div> : <></>}</>
+    return <div className="navigation">{PathnameSplit.flatMap((thisPlace: string, index: number) => {
+        const thisArray = [];
+        if (index > 0) {
+            thisArray.push(<p className="light" key={index * 2}>/</p>);
+        }
+        return [...thisArray, <NavLink key={index * 2 + 1} className="grey" to={PathnameSplit.slice(0, index + 1).join("/")}>{thisPlace}</NavLink>]
+    })}</div>
 }

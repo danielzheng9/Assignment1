@@ -61,8 +61,21 @@ header * {
 .navigation {
     background-color: grey;
     padding: 0.5rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.navigation .light {
+    color: var(--contrast-colour);
+}
+.navigation .grey {
     color: lightgrey;
 }
+.navigation a:not(:hover) {
+    text-decoration: none;
+}
+/* .navigation a:hover {
+    text-decoration: underline;
+} */
 .menuButton:hover {
     /* padding: 0.5rem 1rem; */
     /* background-color: var(--opposite-accent-colour); */
