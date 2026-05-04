@@ -96,6 +96,11 @@ header * {
 .standardText {
     color: var(--contrast-colour);
 }
+.thinDivider {
+    border-right: 1px solid var(--standard-button-outline);
+    min-width: 1px;
+    height: 1rem;
+}
 .blogCard {
     background-color: var(--contrast-colour);
     border: 1px solid var(--standard-button-outline);

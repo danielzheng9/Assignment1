@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "./app.js";
-import { resourceStringMap } from "./resourceStringMap.js";
+import { DividerBar } from "./DividerBar.js";
 export interface MenuButtonProps extends React.ComponentProps<typeof NavLink> {
     children?: React.ReactNode
 }
@@ -21,9 +21,13 @@ export function MenuBar() {
             DOGNET TECHNOLOGIES
         </NavLink>
         <div className="navbar">
-            <StandardMenuButton to="/fix_your_life">REALLY FIX your life</StandardMenuButton>
-            <StandardMenuButton to="/fix_your_life">Fix your life</StandardMenuButton>
-            <StandardMenuButton to="/blogs">Blogs</StandardMenuButton>
+            <div className="miniNavBarGroup">
+                <DividerBar dividerObject={<span className="thinDivider"/>}>
+                    <StandardMenuButton to="/fix_your_life">REALLY FIX your life</StandardMenuButton>
+                    <StandardMenuButton to="/fix_your_life">Fix your life</StandardMenuButton>
+                    <StandardMenuButton to="/blogs">Blogs</StandardMenuButton>
+                </DividerBar>
+            </div>
             <div className="miniNavBarGroup">
                 <MenuButton to="/fix_your_life">Login</MenuButton>
                 <MenuButton to="/blogs">Signup</MenuButton>
