@@ -22,6 +22,9 @@ header {
     margin-left: auto;
     align-items: center;
 }
+.noLink {
+    text-decoration: none;
+}
 .menuButton {
     padding: 0.5rem 1rem;
     background-color: var(--opposite-accent-colour);
