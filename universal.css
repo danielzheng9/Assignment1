@@ -22,7 +22,7 @@ header {
     margin-left: auto;
     align-items: center;
 }
-.navbar > button {
+.menuButton {
     padding: 0.5rem 1rem;
     background-color: var(--opposite-accent-colour);
     color: var(--contrast-colour);
@@ -33,7 +33,7 @@ header {
     padding: 0.5rem 1rem;
     color: lightgrey;
 }
-.navbar > button:hover {
+.menuButton:hover {
     /* padding: 0.5rem 1rem; */
     /* background-color: var(--opposite-accent-colour); */
     /* color: var(--contrast-colour); */
