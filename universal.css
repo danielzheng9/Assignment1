@@ -15,7 +15,7 @@ header {
     vertical-align: center;
     justify-content: start;
     align-items: stretch;
-    text-align: center;
+    text-align: left;
     gap: 1rem;
 }
 header * {
@@ -34,6 +34,7 @@ header * {
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1rem;
+    gap: 1rem;
 }
 .homeStripe .title {
     color: var(--opposite-accent-colour);

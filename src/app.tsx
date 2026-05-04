@@ -6,6 +6,7 @@ import { ArpanetPage } from "./pages/arpanet.js";
 import { NotFound } from "./notfound.js";
 import { useContext, useState } from "react";
 import { Home } from "./pages/home.js";
+import { Blogs } from "./pages/blogs.js";
 export interface MyAppContext {
 }
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
@@ -20,7 +21,8 @@ export function App() {
                 <Routes>
                     <Route path="/" element={<Navigate to="/home" replace />} />
                     <Route path="/home" element={<Home/>} />
-                    <Route path="/arpanet" element={<ArpanetPage/>} />
+                    <Route path="/blogs/arpanet" element={<ArpanetPage/>} />
+                    <Route path="/blogs" element={<Blogs/>} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>

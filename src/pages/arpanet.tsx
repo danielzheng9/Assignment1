@@ -2,6 +2,7 @@ import React from "react";
 export function ArpanetPage() {
     return <>
         <main>
+            <img src="https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/thumb/8/89/ARPANET-Logo.png/300px-ARPANET-Logo.png"/>
             <h1 className="unique_stripe standard">
                 ARPANET
             </h1>
