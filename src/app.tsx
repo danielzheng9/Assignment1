@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import { Home } from "./pages/home.js";
 import { Blogs } from "./pages/blogs.js";
 import { FeaturedBlogs } from "./pages/featured_blogs.js";
+import { WhatIsNetworkBandwidth } from "./pages/bandwidth.js";
 export interface MyAppContext {
 }
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
@@ -23,6 +24,7 @@ export function App() {
                     {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
                     <Route path="/" element={<Home/>} />
                     <Route path="/blogs/arpanet" element={<ArpanetPage/>} />
+                    <Route path="/blogs/whatisnetworkbandwidth" element={<WhatIsNetworkBandwidth/>} />
                     <Route path="/blogs" element={<Blogs/>} />
                     <Route path="/featured_blogs" element={<FeaturedBlogs/>} />
                     <Route path="/404_not_found" element={<NotFound />}/>

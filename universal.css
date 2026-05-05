@@ -94,9 +94,12 @@ header * {
     cursor: pointer;
     filter: brightness(120%);
 }
-.blogCard > img {
+.blogCard img {
     width: 300px;
     height: auto;
+}
+.behaveImage {
+    max-width: 100%;
 }
 .standardText {
     color: var(--contrast-colour);
@@ -106,12 +109,24 @@ header * {
     min-width: 1px;
     height: 1rem;
 }
+.bottomHalf {
+    /* justify-content: start; */
+    /* align-self: start; */
+    /* max-width: 340px; */
+    /* justify-content: center; */
+    /* vertical-align: center; */
+    gap: inherit;
+    display: flex;
+    flex-direction: inherit;
+    margin-top: auto;
+}
 .blogCard {
     background-color: var(--contrast-colour);
     outline: 1px solid var(--standard-button-outline);
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    max-width: 340px;
     gap: 1rem;
     text-decoration: none;
     color: var(--standard-colour);
