@@ -50,6 +50,7 @@ header * {
     display: flex;
     /* margin-left: auto; */
     align-items: center;
+    vertical-align: center;
 }
 .miniNavBarGroup {
     gap: 0.5rem;

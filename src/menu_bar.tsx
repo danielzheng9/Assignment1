@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "./app.js";
 import { DividerBar } from "./DividerBar.js";
+
 export interface MenuButtonProps extends React.ComponentProps<typeof NavLink> {
     children?: React.ReactNode
 }
@@ -24,7 +25,7 @@ export function MenuBar() {
             <div className="miniNavBarGroup">
                 <DividerBar dividerObject={<span className="thinDivider"/>}>
                     <StandardMenuButton to="/featured_blogs">Featured Blogs</StandardMenuButton>
-                    <StandardMenuButton to="https://kidshelpline.com.au/">Fix Your Life</StandardMenuButton>
+                    {/* <StandardMenuButton to="https://kidshelpline.com.au/">Fix Your Life</StandardMenuButton> */}
                     <StandardMenuButton to="/blogs">Blogs</StandardMenuButton>
                 </DividerBar>
             </div>
@@ -33,6 +34,7 @@ export function MenuBar() {
                 <MenuButton to="/signup">Signup</MenuButton>
             </div>
         </div>
+        <i className="hamburger fa-solid fa-bars"></i>
     </header>
 }
 export function MenuNavLinkDisplay() {
