@@ -138,10 +138,10 @@ code {
 .scientificTable {
     border-collapse: collapse;
 }
-table, th, td {
+.scientificTable table, .scientificTable th, .scientificTable td {
     border: 1px solid var(--standard-button-outline);
 }
-th, td {
+.scientificTable th, .scientificTable td {
     padding: 1rem;
     text-align: left;
 }

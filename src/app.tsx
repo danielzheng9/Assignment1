@@ -18,6 +18,7 @@ import { Signup } from "./pages/signup.js";
 import { Binary } from "./pages/binary.js";
 import { ASCII } from "./pages/ascii.js";
 import { Scroller } from "./scroller.js";
+import { UnitsOfStorage } from "./pages/unitsOfStorage.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -30,22 +31,22 @@ export function App() {
             minutesToRead: 15
        },
        {
-            title: "Decimals",
-            description: "Explore decimals like 67. Discover misconceptions, and enlighten your knowledge!",
+            title: "What is a Decimal?",
+            description: "Explore what a decimal is.",
             linkTo: "/blogs/decimal",
             image: "https://thumbs.dreamstime.com/b/serious-self-employed-working-consulting-paper-agenda-home-445069973.jpg",
             minutesToRead: 1
        },
        {
             title: "What is Network Bandwidth",
-            description: "Your network actually has a limiting speed - Which is why your Google feels so slow on Premium Real UltraX wifi compared to Woolworths Everyday.",
+            description: "Your network actually has a limiting speed - Which is why your Google feels so slow on PremiumX wifi as opposed to using Woolworths Everyday.",
             linkTo: "/blogs/whatisnetworkbandwidth",
             image: "https://micronovaimpex.com/wp-content/uploads/2021/02/Ethernet-cabls.png",
             minutesToRead: 2
        },
         {
             title: "Deleted Blog",
-            description: "This blog is deleted.",
+            description: "This blog is deleted. (working 404 page)",
             linkTo: "/blogs/howdoesthetheoryofrelativityrelatetothetheoryofquagerstein",
             image: "<main>",
             minutesToRead: 0.5
@@ -80,6 +81,7 @@ export function App() {
                         <Route path="/blogs/decimal" element={<DecimalPage/>} />
                         <Route path="/blogs/binary" element={<Binary/>} />
                         <Route path="/blogs/ascii" element={<ASCII/>} />
+                        <Route path="/blogs/unitsofstorage" element={<UnitsOfStorage/>} />
                         <Route path="/blogs" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_blogs" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
