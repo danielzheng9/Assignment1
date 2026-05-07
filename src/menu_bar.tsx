@@ -19,7 +19,7 @@ export function StandardMenuButton({children, to, ...props}: MenuButtonProps) {
 }
 export function HamburgerMenuButton({onClick = () => {}}: {onClick?: (toggled: boolean) => void}) {
     const [toggled, setToggled] = useState(false);
-    return <button className="HamburgButton BlockButton" onClick={() => {setToggled(!toggled); onClick(toggled)}}>
+    return <button className="HamburgButton" onClick={() => {setToggled(!toggled); onClick(toggled)}}>
                 <i className="hamburger fa-solid fa-bars"></i>
             </button>
 }

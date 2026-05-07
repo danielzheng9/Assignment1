@@ -133,6 +133,7 @@ header * {
 .full-viewport {
     align-self: stretch;
     width: 100%;
+    padding: 3rem 0rem;
     /* height: 100dvh; */
     flex-grow: 1;
 }
@@ -187,19 +188,57 @@ body {
 }
 .LoginInputItem {
     font-family: 'Jetbrains Mono';
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     font-size: 1rem;
+    background: none;
+    border: none;
+    flex-grow: 1;
+}
+.LoginInputItem:focus {
+    outline: none;
 }
 .AeroLoginButton {
     padding: 0.5rem 1rem;
+    font-family: 'Rubik';
+    border: none;
     font-size: 1rem;
+    background-color: var(--accent-colour);
+    /* background-color: var(--opposite-accent-colour); */
+    /* outline: 1px solid var(--opposite-accent-colour-border); */
+    color: var(--contrast-colour);
+    transition: 0.1s ease-out;
+}
+.dolphinBackground {
+    background-image: url("https://i.ytimg.com/vi/mZlLRch7pe0/maxresdefault.jpg");
+}
+.AeroLoginButton:hover {
+    /* filter: brightness(70%); */
+    background-color: var(--brightest-accent-colour);
+    cursor: pointer;
+}
+.AeroLoginButton:active {
+    background-color: var(--accent-colour);
+    filter: grayscale();
+    color: lightgrey;
+}
+.BlockButton {
+    /* aspect-ratio: 1/1; */
+    border: none;
+    background: none;
+    /* padding: 1rem; */
+}
+.BlockButton:hover {
+    cursor: pointer;
 }
 .sideGroup {
     display: flex;
+    border: 1px solid var(--standard-button-outline);
+    padding: 0.5rem 1rem;
 }
 .loginItem {
     border: 1px solid var(--standard-button-outline);
     padding: 1rem;
+    background-color: var(--standard-button-fill);
     min-width: 340px;
     display: flex;
     gap: 1rem;
@@ -261,10 +300,6 @@ h1, h2, h3 {
 }
 .fa-solid {
     color: white;
-    font-size: 24px;
-}
-.BlockButton {
-    aspect-ratio: 1;
 }
 .HamburgButton {
     /* padding: 0.5rem; */
@@ -272,7 +307,14 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1;
     border: none;
+}
+.hamburger {
+    font-size: 24px;
+}
+.fillFull {
+    align-items: stretch;
 }
 .HamburgButton:hover {
     cursor: pointer;

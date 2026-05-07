@@ -14,6 +14,7 @@ export interface MyAppContext {
 }
 import type { BlogType, Blog } from "./pages/blogs.js";
 import { Login } from "./pages/login.js";
+import { Signup } from "./pages/signup.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -62,6 +63,7 @@ export function App() {
                         <Route path="/blogs" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_blogs" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
+                        <Route path="/signup" element={<Signup/>} />
                         <Route path="*" element={<NotFound />}/>
                         {/* <Route path="*" element={<Navigate to="/404_not_found" replace={false} state/>} /> */}
                 </Routes>
