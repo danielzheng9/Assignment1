@@ -98,7 +98,7 @@ export function Binary() {
         <strong>Question: What is the number <code>37</code> in the ASCII table?</strong>
             {isQuestionOneCorrect !== undefined ? 
             (
-                isQuestionOneCorrect ? <p>congratulations you are competent (also scroll down)</p>: <p>no you are not correct. go look it up again in the attached link</p>
+                isQuestionOneCorrect ? <p>congratulations you are correct (also scroll down)</p>: <p>no you are not correct. go look it up again in the attached link</p>
             ) : <></>}
         <div>
         <input type="text" placeholder="Answer..." onChange={(thisThing) => {

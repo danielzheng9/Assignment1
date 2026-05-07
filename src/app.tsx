@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter, Routes, Route, NavLink, useLocation, Navigate  } from "react-router-dom";
 import { MenuBar } from "./menu_bar.js";
 import { MenuNavLinkDisplay } from "./menu_bar.js";
@@ -17,6 +17,7 @@ import { Login } from "./pages/login.js";
 import { Signup } from "./pages/signup.js";
 import { Binary } from "./pages/binary.js";
 import { ASCII } from "./pages/ascii.js";
+import { Scroller } from "./scroller.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -48,6 +49,20 @@ export function App() {
             linkTo: "/blogs/howdoesthetheoryofrelativityrelatetothetheoryofquagerstein",
             image: "<main>",
             minutesToRead: 0.5
+       },
+        {
+            title: "What is a \"Binary\"?",
+            description: "Explore the cryptic systems of ones and zeros.",
+            linkTo: "/blogs/binary",
+            image: "https://static0.srcdn.com/wordpress/wp-content/uploads/2017/10/Keanu-Reeves-The-Matrix-Code.jpg",
+            minutesToRead: 10
+       },
+        {
+            title: "The Encoding System of ASCII",
+            description: "The standard text communication protocol invented by the americans.",
+            linkTo: "/blogs/ascii",
+            image: "https://cdn.britannica.com/76/4476-050-E643DD49/Betsy-Ross-legend-flag-united-states.jpg",
+            minutesToRead: 2
        }
     ]);
     return <AppContext.Provider value={{
@@ -55,6 +70,7 @@ export function App() {
             <HashRouter>
                 <MenuBar/>
                 <MenuNavLinkDisplay/>
+                <Scroller/>
                 <main>
                 <Routes>
                     {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
