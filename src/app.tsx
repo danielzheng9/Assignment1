@@ -116,7 +116,7 @@ export function App() {
                 </Routes>
                 </main>
                 <footer>
-                    <p>2026</p>
+                    <p className="ghost">Copyright 2026 Daniel Zheng, Ethan Skeues. Licensed under the Apache License, Version 2.0</p>
                 </footer>
             </HashRouter>
         </AppContext.Provider>
