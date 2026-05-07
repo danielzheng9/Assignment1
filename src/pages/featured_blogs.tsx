@@ -1,14 +1,22 @@
 import React from "react";
-import { ArpaNetBlogCard } from "../arpanetBlogCard.js";
+import { Blogs } from "./blogs.js";
 export function FeaturedBlogs() {
-    return <main>
-        <h1>Featured Blogs of This Year</h1>
-        <div className="blogFolder">
-            <ArpaNetBlogCard/>
-            <ArpaNetBlogCard/>
-            <ArpaNetBlogCard/>
-            <ArpaNetBlogCard/>
-            <ArpaNetBlogCard/>
-        </div>
-    </main>
+    return <>
+        <Blogs blogs={[
+                   {
+            title: "What is Network Bandwidth",
+            description: "Your network actually has a limiting speed - Which is why your Google feels so slow on Premium Real UltraX wifi compared to Woolworths Everyday.",
+            linkTo: "/blogs/whatisnetworkbandwidth",
+            image: "https://micronovaimpex.com/wp-content/uploads/2021/02/Ethernet-cabls.png",
+            minutesToRead: 2
+       },
+            {
+                title: "Deleted Blog",
+                description: "This blog is deleted.",
+                linkTo: "/blogs/howdoesthetheoryofrelativityrelatetothetheoryofquagerstein",
+                image: "<main>",
+                minutesToRead: 0.5
+        }
+        ]}></Blogs>
+    </>
 }

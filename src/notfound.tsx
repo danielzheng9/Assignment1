@@ -6,8 +6,10 @@ export function NotFound() {
             <h1 className="notFound">404</h1>
             <p className="ghost">The page you were looking for was not found.</p>
         </div>
-        <NavLink to="/" className={"noLink standardButton"}>
-            Go Home
-        </NavLink>
+        <button onClick={() => {
+            history.back();
+        }} className={"noLink standardButton"}>
+            Go Back
+        </button>
     </main>
 }

@@ -1,14 +1,29 @@
 import React from "react";
-import { ArpaNetBlogCard } from "../arpanetBlogCard.js";
-import { WhatIsNetworkBandwidth } from "./bandwidth.js";
-import { NetworkBandwidthBlogCard } from "../networkBandwidthBlogCard.js";
-import { DecimalBlogCard } from "../decimalBlogCard.js";
-export function Blogs() {
-    return <main>
-        <div className="blogFolder">
-            <ArpaNetBlogCard/>
+import { BlogCard, BlogTitle, BlogDescription, MinuteToReadTime } from "../blogCard.js";
+export interface Blog {
+    title: string,
+    minutesToRead?: number,
+    description?: string,
+    linkTo: string,
+    image: string
+}
+export type BlogType = Blog[];
+export function Blogs({blogs}: {blogs: BlogType}) {
+    return <div className="blogFolder">
+            {/* <ArpaNetBlogCard/>
             <NetworkBandwidthBlogCard/>
-            <DecimalBlogCard/>
+            <DecimalBlogCard/> */}
+            {
+                blogs.map((thisBlog: Blog, index: number) => {
+                    return <BlogCard to={thisBlog.linkTo} key={index}>
+                            <BlogTitle>{thisBlog.title}</BlogTitle>
+                            {thisBlog.description ? <BlogDescription>{thisBlog.description}</BlogDescription> : <></> }
+                            <div className="bottomHalf">
+                                <img src={thisBlog.image}></img>
+                                {thisBlog.minutesToRead ? <MinuteToReadTime mins={thisBlog.minutesToRead}/> : <></> }
+                            </div>
+                        </BlogCard>
+                })
+            }
         </div>
-    </main>
 }

@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "./app.js";
 import { DividerBar } from "./DividerBar.js";
+import { Logo } from "./logo.js";
 
 export interface MenuButtonProps extends React.ComponentProps<typeof NavLink> {
     children?: React.ReactNode
@@ -16,12 +17,16 @@ export function StandardMenuButton({children, to, ...props}: MenuButtonProps) {
         {children}
     </NavLink>
 }
+export function HamburgerMenuButton({onClick = () => {}}: {onClick?: (toggled: boolean) => void}) {
+    const [toggled, setToggled] = useState(false);
+    return <button className="HamburgButton BlockButton" onClick={() => {setToggled(!toggled); onClick(toggled)}}>
+                <i className="hamburger fa-solid fa-bars"></i>
+            </button>
+}
 export function MenuBar() {
     return <header>
-        <NavLink to="/" className="heading_logo standard noLink">
-            DOGNET TECHNOLOGIES
-        </NavLink>
-        <div className="navbar">
+        <Logo/>
+        <div className="navbar toggle_desktop">
             <div className="miniNavBarGroup">
                 <DividerBar dividerObject={<span className="thinDivider"/>}>
                     <StandardMenuButton to="/featured_blogs">Featured Blogs</StandardMenuButton>
@@ -34,7 +39,10 @@ export function MenuBar() {
                 <MenuButton to="/signup">Signup</MenuButton>
             </div>
         </div>
-        <i className="hamburger fa-solid fa-bars"></i>
+        <div className="toggle_small_screen miniNavBarGroup">
+            <MenuButton to="/login">Login</MenuButton>
+            <HamburgerMenuButton/>
+        </div>
     </header>
 }
 export function MenuNavLinkDisplay() {
