@@ -231,6 +231,11 @@ footer {
 }
 .LoginInputGroup > .sideGroup {
     background: linear-gradient(rgb(246, 246, 246) 0%, rgb(240, 240, 240) 25%, rgb(219, 219, 219) 50%, rgb(208, 208, 208) 55%, rgb(196, 196, 196) 100%);
+}
+.LoginInputItem:focus {
+    outline: none;
+}
+.LoginInputGroup > .sideGroup:has(.LoginInputItem:focus) {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
 .LoginInputItem {
@@ -240,9 +245,6 @@ footer {
     background: none;
     border: none;
     flex-grow: 1;
-}
-.LoginInputItem:focus {
-    outline: none;
 }
 .AeroLoginButton {
     padding: 0.5rem 1rem;
