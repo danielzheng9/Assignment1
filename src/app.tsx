@@ -102,9 +102,9 @@ export function App() {
        },
        {
             title: "Online, you are an entity.",
-            description: "Anyone can be an entity",
+            description: "Explore what it means to be a thing online, with a digital prescence.",
             linkTo: "/definitions/entity",
-            image: "",
+            image: "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24805888/STK160_X_Twitter_006.jpg?quality=90&strip=all&crop=0%2C0.0083291687489577%2C100%2C99.983341662502&w=2400",
             minutesToRead: 1
        }
     ]);
