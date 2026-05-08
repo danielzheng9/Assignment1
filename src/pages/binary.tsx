@@ -25,7 +25,7 @@ export function Binary() {
             The original ASCII only had 7 bits (128 characters).
             Padded ASCII — The one we are going to talk about — It does have 8 bits, but the first bit is just always off (0) and used as padding.
         </p>
-        <NavLink to="/blogs/ascii">
+        <NavLink to="/definitions/ascii">
         click here to know about ASCII
         </NavLink>
         <p>In a binary number, each bit is twice the value of the bit on the right of this bit. The first bit on the very right has a value of 1.</p>
@@ -92,7 +92,7 @@ export function Binary() {
             </tbody>
         </table>
         <p>32 + 4 + 1 = 37.</p>
-        <p>Look that up in the lookup table at <NavLink to="/blogs/ascii">
+        <p>Look that up in the lookup table at <NavLink to="/definitions/ascii">
         the encoding system of ascii
         </NavLink></p>
         <strong>Question: What is the number <code>37</code> in the ASCII table?</strong>
