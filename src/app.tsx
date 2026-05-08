@@ -24,6 +24,7 @@ import { WhatIsCloudBasedStorage } from "./pages/cloudBasedStorage.js";
 import { MenuOfLinks } from "./menuOfLinks.js";
 import { WhatIsInformation } from "./pages/whatIsInformation.js";
 import { InternetOfMe } from "./pages/internetOfMe.js";
+import { WhatIsASocialNetwork } from "./pages/socialNetwork.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -85,11 +86,18 @@ export function App() {
             minutesToRead: 1
        },
         {
-            title: "Internet of Me",
+            title: "Internet of Me and Internet of Things",
             description: "How you are connected to the rest of the world",
             linkTo: "/definitions/internetofme",
             image: "https://bluzinc.co/wp-content/uploads/2015/07/145062127.jpg",
             minutesToRead: 5
+       }, 
+       {
+            title: "Social Networks",
+            description: "Understand connections between you and others",
+            linkTo: "/definitions/socialnetworks",
+            image: "https://i.imgflip.com/1jqcf8.jpg?a493776",
+            minutesToRead: 1
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -119,6 +127,7 @@ export function App() {
                         <Route path="/definitions/unitsofstorage" element={<UnitsOfStorage/>} />
                         <Route path="/definitions/cloudbasedstorage" element={<WhatIsCloudBasedStorage/>} />
                         <Route path="/definitions/internetofme" element={<InternetOfMe/>} />
+                        <Route path="/definitions/socialnetworks" element={<WhatIsASocialNetwork/>} />
                         <Route path="/definitions" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
