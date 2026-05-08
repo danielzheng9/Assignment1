@@ -2,11 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./app.js";
 
-const header = document.querySelector("body");
-if (!header) throw new Error("header does not exist");
-const root = createRoot(header);
+
+const body = document.querySelector("body");
+if (!body) throw new Error("body does not exist");
+const root = createRoot(body);
 root.render(
-    <StrictMode>
+    <>
+    {!import.meta.env.PROD ? <StrictMode>
         <App/>
-    </StrictMode>
+    </StrictMode> : <App/>}</>
 )
