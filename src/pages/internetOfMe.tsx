@@ -11,9 +11,9 @@ export function InternetOfMe() {
         <p>
             A primary form of the Internet of Me can include personalised advertising by harvesting your data and selling it. This is highly controversial as some businesses/websites can take this a long way with extensive data harvesting and monetising off that.
         </p>
-        <strong>
-            Legally in Australia (Part of the Privacy Act 1988), opting-out is a required feature. You can make yourself untrackable by continuously managing each service you use to tell them to stop tracking you or harvesting your data.
-        </strong>
+        <p>
+            Legally in Australia (Part of the Privacy Act 1988), opting-out is a required feature.
+        </p>
         <p>
             While you can do this, it is not a simple process. It involves many steps.
         </p>
