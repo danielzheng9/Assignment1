@@ -74,7 +74,7 @@ export function MenuNavLinkDisplay({className, ...props}: {className: string} & 
     return <div {...props} className={`navigation ${className}`}>{PathnameSplit.flatMap((thisPlace: string, index: number) => {
         const thisArray = [];
         if (index > 0) {
-            thisArray.push(<p className="light" key={index * 2}>/</p>);
+            thisArray.push(<p className="light" key={index * 2}>{">"}</p>);
         }
 
         return [...thisArray, <NavLink key={index * 2 + 1} className="grey" to={PathnameSplit.slice(0, index + 1).join("/")}>{thisPlace.charAt(0).toUpperCase() + thisPlace.slice(1)}</NavLink>]

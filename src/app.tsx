@@ -6,14 +6,14 @@ import { ArpanetPage } from "./pages/arpanet.js";
 import { NotFound } from "./notfound.js";
 import { useContext, useState } from "react";
 import { Home } from "./pages/home.js";
-import { Blogs } from "./pages/blogs.js";
+import { BlogsPage } from "./pages/blogs.js";
 import { FeaturedBlogs } from "./pages/featured_blogs.js";
 import { WhatIsNetworkBandwidth } from "./pages/bandwidth.js";
 import { DecimalPage } from "./pages/decimal.js";
 export interface MyAppContext {
     isLoggedIn: boolean, setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>
 }
-import type { BlogType, Blog } from "./pages/blogs.js";
+import type { BlogType, Blog } from "./blogsComponent.js";
 import { Login } from "./pages/login.js";
 import { Signup } from "./pages/signup.js";
 import { Binary } from "./pages/binary.js";
@@ -146,7 +146,7 @@ export function App() {
                         <Route path="/definitions/socialnetworks" element={<WhatIsASocialNetwork/>} />
                         <Route path="/definitions/relationship" element={<WhatIsARelationship/>} />
                         <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
-                        <Route path="/definitions" element={<Blogs blogs={blogs}/>} />
+                        <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/signup" element={<Signup/>} />

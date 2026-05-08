@@ -1,5 +1,5 @@
 import React from "react";
-import { Blogs } from "./blogs.js";
+import { Blogs } from "../blogsComponent.js";
 export function FeaturedBlogs() {
     return <>
         <h1>Featured Definitions</h1>
