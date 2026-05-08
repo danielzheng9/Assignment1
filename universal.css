@@ -229,6 +229,10 @@ footer {
     display: flex;
     gap: 0.5rem;
 }
+.LoginInputGroup > .sideGroup {
+    background: linear-gradient(rgb(246, 246, 246) 0%, rgb(240, 240, 240) 25%, rgb(219, 219, 219) 50%, rgb(208, 208, 208) 55%, rgb(196, 196, 196) 100%);
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+}
 .LoginInputItem {
     font-family: 'Jetbrains Mono';
     /* padding: 0.5rem 1rem; */
@@ -245,7 +249,9 @@ footer {
     font-family: 'Rubik';
     border: none;
     font-size: 1rem;
-    background-color: var(--accent-colour);
+    /* background-color: var(--accent-colour); */
+    background: linear-gradient(rgb(245, 192, 192) 0%, rgb(181, 70, 70) 50%, rgb(210, 76, 76) 100%);
+    /* filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); */
     /* background-color: var(--opposite-accent-colour); */
     /* outline: 1px solid var(--opposite-accent-colour-border); */
     color: var(--contrast-colour);
@@ -290,6 +296,9 @@ footer {
     padding: 0.5rem 1rem;
 }
 .loginItem {
+    /* background: linear-gradient(rgb(246, 246, 246) 0%, rgb(240, 240, 240) 25%, rgb(203, 203, 203) 50%, rgb(210, 210, 210) 55%, rgb(128, 128, 128) 100%); */
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
     border: 1px solid var(--standard-button-outline);
     padding: 1rem;
     background-color: var(--standard-button-fill);
@@ -377,8 +386,12 @@ h1, h2, h3 {
 }
 button.disabled {
     transition: none;
+    background: none;
+    color: grey;
     background-color: darkgrey;
 }
 button.disabled:hover {
+    background: none;
+    color: grey;
     background-color: darkgrey;
 }

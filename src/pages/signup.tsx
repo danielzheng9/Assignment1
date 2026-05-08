@@ -45,7 +45,6 @@ export function Signup() {
                 </SideGroup>
             </LoginInputGroup>
             <NavLink to="/login">Click here to login</NavLink>
-            <p className={serverMessage ? "redServerMessage" : "hidden"}>{serverMessage}</p>
             <AeroLoginButton tags={isButtonDisabled ? "disabled" : ""} onClick={() => {
                 if (username.length === 0) return setServerMessage("The username field is empty");
                 if (password.length === 0) return setServerMessage("The password field is empty");
@@ -73,6 +72,7 @@ export function Signup() {
                     setIsButtonDisabled(false);
                 }, 2000)
             }}>Sign up</AeroLoginButton>
+            <p className={serverMessage ? "redServerMessage" : "hidden"}>{serverMessage}</p>
         </form>
     </div>
 }
