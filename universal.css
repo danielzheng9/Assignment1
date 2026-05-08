@@ -231,11 +231,13 @@ footer {
 }
 .LoginInputGroup > .sideGroup {
     background: linear-gradient(rgb(246, 246, 246) 0%, rgb(240, 240, 240) 25%, rgb(219, 219, 219) 50%, rgb(208, 208, 208) 55%, rgb(196, 196, 196) 100%);
+    transition: 0.25s ease-out;
 }
 .LoginInputItem:focus {
     outline: none;
 }
 .LoginInputGroup > .sideGroup:has(.LoginInputItem:focus) {
+    /* outline: 1px solid var(--accent-colour); */
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
 .LoginInputItem {
@@ -335,6 +337,9 @@ a {
 }
 .main-logo {
     image-rendering: pixelated;
+}
+.main-logo:hover {
+    filter: brightness(150%);
 }
 main {
     padding: 0.5rem 1rem;
