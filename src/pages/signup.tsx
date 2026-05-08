@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LoginInputGroup, LoginInputTitle, SideGroup, LoginInputInput, AeroLoginButton } from "./login.js";
 import { Navigate, NavLink } from "react-router-dom";
-export function Signup({hasLoggedIn, setLoggedIn}: {hasLoggedIn: boolean, setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>}) {
+import { AppContext } from "../app.js";
+export function Signup() {
+    const appContext = useContext(AppContext);
+    if (!appContext) return <></>;
+    const hasLoggedIn = appContext.isLoggedIn;
+    const setLoggedIn = appContext.setIsLoggedIn;
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");

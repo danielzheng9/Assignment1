@@ -11,6 +11,7 @@ import { FeaturedBlogs } from "./pages/featured_blogs.js";
 import { WhatIsNetworkBandwidth } from "./pages/bandwidth.js";
 import { DecimalPage } from "./pages/decimal.js";
 export interface MyAppContext {
+    isLoggedIn: boolean, setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>
 }
 import type { BlogType, Blog } from "./pages/blogs.js";
 import { Login } from "./pages/login.js";
@@ -22,6 +23,7 @@ import { UnitsOfStorage } from "./pages/unitsOfStorage.js";
 import { WhatIsCloudBasedStorage } from "./pages/cloudBasedStorage.js";
 import { MenuOfLinks } from "./menuOfLinks.js";
 import { WhatIsInformation } from "./pages/whatIsInformation.js";
+import { InternetOfMe } from "./pages/internetOfMe.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -81,16 +83,24 @@ export function App() {
             linkTo: "/definitions/datavsinformation",
             image: "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc=",
             minutesToRead: 1
+       },
+        {
+            title: "Internet of Me",
+            description: "How you are connected to the rest of the world",
+            linkTo: "/definitions/internetofme",
+            image: "https://bluzinc.co/wp-content/uploads/2015/07/145062127.jpg",
+            minutesToRead: 1
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
     return <AppContext.Provider value={{
+            isLoggedIn: loggedIn, setIsLoggedIn: setLoggedIn
         }}>            
             <HashRouter>
-                <MenuBar setLoggedIn={setLoggedIn} toggleMiniNav={(toggled: boolean) => {
+                <MenuBar toggleMiniNav={(toggled: boolean) => {
                     setMiniNavOpen(toggled);
-                }} isLoggedIn={loggedIn}/>
+                }}/>
                 <div className="toggle_desktop">
                 <MenuNavLinkDisplay className="toggle_desktop"/>
                 </div>
@@ -108,10 +118,11 @@ export function App() {
                         <Route path="/definitions/datavsinformation" element={<WhatIsInformation/>} />
                         <Route path="/definitions/unitsofstorage" element={<UnitsOfStorage/>} />
                         <Route path="/definitions/cloudbasedstorage" element={<WhatIsCloudBasedStorage/>} />
+                        <Route path="/definitions/internetofme" element={<InternetOfMe/>} />
                         <Route path="/definitions" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
-                        <Route path="/signup" element={<Signup hasLoggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+                        <Route path="/signup" element={<Signup/>} />
                         <Route path="*" element={<NotFound />}/>
                         {/* <Route path="*" element={<Navigate to="/404_not_found" replace={false} state/>} /> */}
                 </Routes>

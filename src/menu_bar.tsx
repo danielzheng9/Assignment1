@@ -23,7 +23,11 @@ export function HamburgerMenuButton({onClick = () => {}}: {onClick?: (toggled: b
                 { toggled ? <i className="hamburger fa-solid fa-close"></i> : <i className="hamburger fa-solid fa-bars"></i> }
             </button>
 }
-export function MenuBar({toggleMiniNav, isLoggedIn, setLoggedIn}: {isLoggedIn: boolean, setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>, toggleMiniNav: (toggled: boolean) => void}) {
+export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => void}) {
+    const appContext = useContext(AppContext);
+    if (!appContext) return <></>;
+    const setLoggedIn = appContext?.setIsLoggedIn;
+    const isLoggedIn = appContext?.isLoggedIn;
     return <header>
         <Logo/>
         <div className="navbar toggle_desktop">
