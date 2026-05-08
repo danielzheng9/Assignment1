@@ -2,7 +2,7 @@ import React from "react";
 export function ArpanetPage() {
     return <>
             <div className="flexSide">            
-            <img src="https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/thumb/8/89/ARPANET-Logo.png/300px-ARPANET-Logo.png" alt="A black outline globe icon with the text ARPANET on it."/>
+            <img src="https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/thumb/8/89/ARPANET-Logo.png/300px-ARPANET-Logo.png" alt="A black outline globe icon with the text ARPANET on it." width={300} height={207}/>
             <div className="flexNormal">
             <h1 className="unique_stripe standard">
                 What is ARPANET?

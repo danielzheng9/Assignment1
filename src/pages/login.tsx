@@ -14,8 +14,8 @@ export function LoginInputGroup({children}: {children: React.ReactNode}) {
         {children}
     </div>
 }
-export function AeroLoginButton({children}: {children: React.ReactNode}) {
-    return <button className="AeroLoginButton">{children}</button>;
+export function AeroLoginButton({children, tags, ...props}: {children: React.ReactNode, tags?: string} & React.ComponentProps<"button">) {
+    return <button className={`AeroLoginButton ${tags}`} {...props}>{children}</button>;
 }
 export function SideGroup({children}: {children: React.ReactNode}) {
     return <div className="sideGroup fillFull">{children}</div>
@@ -24,6 +24,8 @@ export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [showHidden, setShowHidden] = useState(false);
+    const [serverMessage, setServerMessage] = useState<string | undefined>();
+    const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
     return <div className="centered full-viewport">
         <form className="loginItem">
             <h3>Login to DOGNET TECHNOLOGIES</h3>
@@ -49,7 +51,16 @@ export function Login() {
                 </SideGroup>
             </LoginInputGroup>
             <NavLink to="/signup">Click here to sign up</NavLink>
-            <AeroLoginButton>Login</AeroLoginButton>
+            <p className={serverMessage ? "redServerMessage" : "hidden"}>{serverMessage}</p>
+            <AeroLoginButton disabled={isButtonDisabled} tags={isButtonDisabled ? "disabled" : ""} onClick={() => {
+                if (username.length === 0) return setServerMessage("The username field is empty");
+                if (password.length === 0) return setServerMessage("The password field is empty");
+                setIsButtonDisabled(true);
+                setTimeout(() => {
+                    setServerMessage("Incorrect password or username");
+                    setIsButtonDisabled(false);
+                }, 2000)
+            }}>Login</AeroLoginButton>
         </form>
     </div>
 }

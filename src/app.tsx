@@ -84,12 +84,13 @@ export function App() {
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
+    const [loggedIn, setLoggedIn] = useState<boolean>(false);
     return <AppContext.Provider value={{
         }}>            
             <HashRouter>
-                <MenuBar toggleMiniNav={(toggled: boolean) => {
+                <MenuBar setLoggedIn={setLoggedIn} toggleMiniNav={(toggled: boolean) => {
                     setMiniNavOpen(toggled);
-                }}/>
+                }} isLoggedIn={loggedIn}/>
                 <div className="toggle_desktop">
                 <MenuNavLinkDisplay className="toggle_desktop"/>
                 </div>
@@ -110,7 +111,7 @@ export function App() {
                         <Route path="/definitions" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
-                        <Route path="/signup" element={<Signup/>} />
+                        <Route path="/signup" element={<Signup hasLoggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
                         <Route path="*" element={<NotFound />}/>
                         {/* <Route path="*" element={<Navigate to="/404_not_found" replace={false} state/>} /> */}
                 </Routes>

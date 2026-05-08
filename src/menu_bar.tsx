@@ -23,7 +23,7 @@ export function HamburgerMenuButton({onClick = () => {}}: {onClick?: (toggled: b
                 { toggled ? <i className="hamburger fa-solid fa-close"></i> : <i className="hamburger fa-solid fa-bars"></i> }
             </button>
 }
-export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => void}) {
+export function MenuBar({toggleMiniNav, isLoggedIn, setLoggedIn}: {isLoggedIn: boolean, setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>, toggleMiniNav: (toggled: boolean) => void}) {
     return <header>
         <Logo/>
         <div className="navbar toggle_desktop">
@@ -34,12 +34,23 @@ export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => v
                 </DividerBar>
             </div>
             <div className="miniNavBarGroup">
-                <MenuButton to="/login">Login</MenuButton>
-                <MenuButton to="/signup">Signup</MenuButton>
+                {!isLoggedIn ? 
+                <><MenuButton to="/login">Login</MenuButton>
+                <MenuButton to="/signup">Signup</MenuButton></> : 
+                <MenuButton to="/login" onClick={() => {
+                    setLoggedIn(false);
+                }}>Log out</MenuButton>
+                }
             </div>
         </div>
         <div className="toggle_small_screen miniNavBarGroup">
-            <MenuButton to="/login">Login</MenuButton>
+                {!isLoggedIn ? 
+                <MenuButton to="/login">Login</MenuButton>
+                : 
+                <MenuButton to="/login" onClick={() => {
+                    setLoggedIn(false);
+                }}>Log out</MenuButton>
+                }
             <HamburgerMenuButton onClick={(toggled: boolean) => {toggleMiniNav(toggled)}}/>
         </div>
     </header>
