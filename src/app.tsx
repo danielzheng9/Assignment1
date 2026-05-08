@@ -25,6 +25,7 @@ import { MenuOfLinks } from "./menuOfLinks.js";
 import { WhatIsInformation } from "./pages/whatIsInformation.js";
 import { InternetOfMe } from "./pages/internetOfMe.js";
 import { WhatIsASocialNetwork } from "./pages/socialNetwork.js";
+import { WhatIsAnEntity } from "./pages/entity.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -98,6 +99,13 @@ export function App() {
             linkTo: "/definitions/socialnetworks",
             image: "https://i.imgflip.com/1jqcf8.jpg?a493776",
             minutesToRead: 1
+       },
+       {
+            title: "Online, you are an entity.",
+            description: "Anyone can be an entity",
+            linkTo: "/definitions/entity",
+            image: "",
+            minutesToRead: 1
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -128,6 +136,7 @@ export function App() {
                         <Route path="/definitions/cloudbasedstorage" element={<WhatIsCloudBasedStorage/>} />
                         <Route path="/definitions/internetofme" element={<InternetOfMe/>} />
                         <Route path="/definitions/socialnetworks" element={<WhatIsASocialNetwork/>} />
+                        <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
                         <Route path="/definitions" element={<Blogs blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
