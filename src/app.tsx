@@ -54,7 +54,7 @@ export function App() {
             description: "Explore the cryptic systems of ones and zeros.",
             linkTo: "/definitions/binary",
             image: "https://static0.srcdn.com/wordpress/wp-content/uploads/2017/10/Keanu-Reeves-The-Matrix-Code.jpg",
-            minutesToRead: 10
+            minutesToRead: 5
        },
         {
             title: "The Encoding System of ASCII",
@@ -89,7 +89,7 @@ export function App() {
             description: "How you are connected to the rest of the world",
             linkTo: "/definitions/internetofme",
             image: "https://bluzinc.co/wp-content/uploads/2015/07/145062127.jpg",
-            minutesToRead: 1
+            minutesToRead: 5
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);

@@ -7,6 +7,9 @@ export function DecimalPage() {
         <p>
             You can join digits together by powers of 10 to form larger digits, hence the name base-10.
         </p>
+        <p>
+            In a decimal, each number is 10th to the power of what is on the right.
+        </p>
         <table>
             <thead>
                 <tr>

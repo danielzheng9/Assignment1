@@ -8,6 +8,6 @@ export function WhatIsInformation() {
     <strong>Information:</strong>
     <p>Information are ideas or facts collected from human readable sources like text messages. Information is a structured way to understand ideas and concepts.</p>
     <p>Information is a readable way to present the data. It's a refined, and structured way of presenting data.</p>
-    <img src="https://thumbs.dreamstime.com/b/d-man-thinking-red-question-marks-over-white-background-30387341.jpg" alt="A 3D presentation of a white humanoid striking a thinking pose on a white background."/>
+    <img className="behaveImage" src="https://thumbs.dreamstime.com/b/d-man-thinking-red-question-marks-over-white-background-30387341.jpg" alt="A 3D presentation of a white humanoid striking a thinking pose on a white background."/>
     </>
 }

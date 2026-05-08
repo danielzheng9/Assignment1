@@ -15,7 +15,7 @@ export function LoginInputGroup({children}: {children: React.ReactNode}) {
     </div>
 }
 export function AeroLoginButton({children, tags, ...props}: {children: React.ReactNode, tags?: string} & React.ComponentProps<"button">) {
-    return <button className={`AeroLoginButton ${tags}`} {...props}>{children}</button>;
+    return <button type="submit" className={`AeroLoginButton ${tags}`} {...props}>{children}</button>;
 }
 export function SideGroup({children}: {children: React.ReactNode}) {
     return <div className="sideGroup fillFull">{children}</div>
@@ -27,7 +27,9 @@ export function Login() {
     const [serverMessage, setServerMessage] = useState<string | undefined>();
     const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
     return <div className="centered full-viewport">
-        <form className="loginItem">
+        <form className="loginItem" onSubmit={(event) => {
+            event.preventDefault();
+        }}>
             <h3>Login to DOGNET TECHNOLOGIES</h3>
             <LoginInputGroup>
                 <LoginInputTitle>username</LoginInputTitle>
@@ -56,6 +58,7 @@ export function Login() {
                 if (username.length === 0) return setServerMessage("The username field is empty");
                 if (password.length === 0) return setServerMessage("The password field is empty");
                 setIsButtonDisabled(true);
+                setServerMessage("");
                 setTimeout(() => {
                     setServerMessage("Incorrect password or username");
                     setIsButtonDisabled(false);

@@ -16,7 +16,9 @@ export function Signup() {
     const characters = ["superman", "batman", "wonder woman", "joker", "the joker"];
     return <div className="centered full-viewport dolphinBackground">
         {hasLoggedIn ? <Navigate to="/" replace={false} state/> : <></>}
-        <form className="loginItem">
+        <form className="loginItem" onSubmit={(event) => {
+            event.preventDefault();
+        }}>
             <h3>Create your account!</h3>
             <LoginInputGroup>
                 <LoginInputTitle>username</LoginInputTitle>
