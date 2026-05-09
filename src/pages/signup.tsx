@@ -13,7 +13,7 @@ export function Signup() {
     const [showHidden, setShowHidden] = useState(false);
     const [serverMessage, setServerMessage] = useState<string | undefined>();
     const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
-    const characters = ["superman", "batman", "wonder woman", "joker", "the joker"];
+    const characters = ["superman", "batman", "wonder woman", "batman", "batman"];
     return <div className="centered full-viewport dolphinBackground">
         {hasLoggedIn ? <Navigate to="/" replace={false} state/> : <></>}
         <form className="loginItem" onSubmit={(event) => {
