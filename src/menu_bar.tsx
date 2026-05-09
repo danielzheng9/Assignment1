@@ -28,7 +28,7 @@ export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => v
     if (!appContext) return <></>;
     const setLoggedIn = appContext?.setIsLoggedIn;
     const isLoggedIn = appContext?.isLoggedIn;
-    return <header>
+    return <div className="menuBar">
         <Logo/>
         <div className="navbar toggle_desktop">
             <div className="miniNavBarGroup">
@@ -57,7 +57,7 @@ export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => v
                 }
             <HamburgerMenuButton onClick={(toggled: boolean) => {toggleMiniNav(toggled)}}/>
         </div>
-    </header>
+    </div>
 }
 export function MenuNavLinkDisplay({className, ...props}: {className: string} & React.ComponentProps<"div">) {
     const appContext = useContext(AppContext);

@@ -13,7 +13,7 @@
     --standard-button-fill: rgb(246, 246, 246);
     /* --header-colour: rgb(144, 144, 144); */
 }
-header {
+.menuBar {
     /* background-color: var(--accent-colour); */
     background: linear-gradient(rgb(235, 156, 156) 0%, var(--brightest-accent-colour) 25%, var(--accent-colour) 50%, rgb(137, 21, 21) 51%, var(--accent-colour) 100%);
     padding: 0.5rem 1rem;
@@ -23,10 +23,12 @@ header {
     align-items: stretch;
     text-align: left;
     gap: 1rem;
-    position: sticky;
-    top: 0;
 }
-header * {
+header {
+    top: 0;
+    position: sticky;
+}
+.menuBar * {
     display: flex;
     align-items: center;
 }
@@ -165,7 +167,9 @@ code {
     /* gap: 1rem; */
 }
 .menuOfLinks a {
+    display: block;
     padding: 0.5rem 0rem;
+    /* width: 100%; */
 }
 .full-viewport {
     align-self: stretch;
@@ -206,7 +210,7 @@ code {
     flex-wrap: wrap;
     align-items: stretch;
 }
-header .heading_logo {
+.menuBar .heading_logo {
     color: var(--contrast-colour);
 }
 body {

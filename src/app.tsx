@@ -130,13 +130,16 @@ export function App() {
             isLoggedIn: loggedIn, setIsLoggedIn: setLoggedIn
         }}>            
             <HashRouter>
+                <header>
                 <MenuBar toggleMiniNav={(toggled: boolean) => {
                     setMiniNavOpen(toggled);
                 }}/>
+                {miniNavOpen ? <MenuOfLinks/> : <></>}
+                </header>
+                {!miniNavOpen && <MenuNavLinkDisplay className="toggle_small_screen"/>}
                 <div className="toggle_desktop">
                 <MenuNavLinkDisplay className="toggle_desktop"/>
                 </div>
-                {miniNavOpen ? <MenuOfLinks/> : <MenuNavLinkDisplay className="toggle_small_screen"/>}
                 <Scroller/>
                 <main>
                 <Routes>
