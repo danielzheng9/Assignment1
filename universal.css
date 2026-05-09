@@ -13,6 +13,24 @@
     --standard-button-fill: rgb(246, 246, 246);
     /* --header-colour: rgb(144, 144, 144); */
 }
+.searchBarAndTitle {
+    vertical-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.search {
+    background-color: var(--standard-button-fill);
+    outline: none;
+    border: 1px solid var(--standard-button-outline);
+    padding: 0.5rem 1rem;
+    font-family: 'Rubik';
+    font-size: 1rem;
+}
+.search:focus {
+    border: 1px solid var(--brightest-accent-colour);
+}
 footer {
     pointer-events: none;
     opacity: 20%
