@@ -266,6 +266,15 @@ footer {
     /* outline: 1px solid var(--accent-colour); */
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
+.is_safari .LoginInputGroup > .sideGroup {
+    transition: none
+}
+.is_safari .LoginInputGroup > .sideGroup:has(.LoginInputItem:focus) {
+    filter: none;
+    background-color: red;
+    outline: 1px solid var(--accent-colour);
+}
+
 .LoginInputItem {
     font-family: 'Jetbrains Mono';
     /* padding: 0.5rem 1rem; */
