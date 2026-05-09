@@ -136,8 +136,8 @@ export function App() {
        }, 
        {
             title: "Cybersecurity",
-            description: "Hardware",
-            linkTo: "/definitions/hardware",
+            description: "Cybersecurity",
+            linkTo: "/definitions/cybersecurity",
             image: "https://miro.medium.com/v2/resize:fit:1400/1*K4sPMOP5AdezW6fMvEtIew@2x.jpeg",
             minutesToRead: 10
      }, 

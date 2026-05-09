@@ -3,7 +3,7 @@ export function Cybersecurity() {
         <h1>Cybersecurity.</h1>
         <p>In vague terms, it refers to the protection of information technology elements, including hardware and software, data or network services.</p>
         <p>
-            Cybersecurity utilises cautious practices to 
+            Proper security involves setting up 2 factor authentication, protecting yourself from threats online by not trusting any random software download, and other practices. 
         </p>
     </>
 }
