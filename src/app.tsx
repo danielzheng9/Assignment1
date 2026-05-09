@@ -30,6 +30,8 @@ import { WhatIsARelationship } from "./pages/relationship.js";
 import { Sociogram } from "./pages/sociogram.js";
 import { DigitalCitizenship } from "./pages/digitalCitizenship.js";
 import { Hardware } from "./pages/hardware.js";
+import { Cybersecurity } from "./pages/cybersecurity.js";
+import { Logo, LogoFull } from "./logo.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -133,12 +135,19 @@ export function App() {
             minutesToRead: 1
        }, 
        {
-            title: "Hardware",
+            title: "Cybersecurity",
             description: "Hardware",
             linkTo: "/definitions/hardware",
-            image: "https://projectcpim2017.wordpress.com/wp-content/uploads/2017/10/software-hardware-5-638ceo-strickler-on-success-beyond-successful-crowdfunding-1.jpg?w=825",
+            image: "https://miro.medium.com/v2/resize:fit:1400/1*K4sPMOP5AdezW6fMvEtIew@2x.jpeg",
             minutesToRead: 10
-       }
+     }, 
+     {
+          title: "Hardware",
+          description: "Hardware",
+          linkTo: "/definitions/hardware",
+          image: "https://projectcpim2017.wordpress.com/wp-content/uploads/2017/10/software-hardware-5-638ceo-strickler-on-success-beyond-successful-crowdfunding-1.jpg?w=825",
+          minutesToRead: 10
+     }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
@@ -175,6 +184,7 @@ export function App() {
                         <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
                         <Route path="/definitions/sociogram" element={<Sociogram/>} />
                         <Route path="/definitions/hardware" element={<Hardware/>} />
+                        <Route path="/definitions/cybersecurity" element={<Cybersecurity/>} />
                         <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
@@ -185,7 +195,8 @@ export function App() {
                 </Routes>
                 </main>
                 <footer>
-                    <p className="ghost">Copyright 2026 Daniel, and Ethan. Licensed under the Apache License, Version 2.0</p>
+                    <LogoFull/>
+                    <p>Copyright 2026 Daniel, and Ethan. Licensed under the Apache License, Version 2.0</p>
                 </footer>
             </HashRouter>
         </AppContext.Provider>
