@@ -28,6 +28,7 @@ import { WhatIsASocialNetwork } from "./pages/socialNetwork.js";
 import { WhatIsAnEntity } from "./pages/entity.js";
 import { WhatIsARelationship } from "./pages/relationship.js";
 import { Sociogram } from "./pages/sociogram.js";
+import { DigitalCitizenship } from "./pages/digitalCitizenship.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -122,6 +123,13 @@ export function App() {
             linkTo: "/definitions/sociogram",
             image: "https://thumbs.dreamstime.com/b/two-d-man-joining-together-puzzle-pieces-render-35185862.jpg",
             minutesToRead: 1
+       },
+       {
+            title: "Digital Citizenship & Digital Footprint",
+            description: "You are a digital citizen in a digital society. The internet remembers more about you than you expect.",
+            linkTo: "/definitions/digitalcitizenship",
+            image: "https://defradigital.blog.gov.uk/wp-content/uploads/sites/136/2020/01/digital-footprint.jpg",
+            minutesToRead: 1
        }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -158,6 +166,7 @@ export function App() {
                         <Route path="/definitions/relationship" element={<WhatIsARelationship/>} />
                         <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
                         <Route path="/definitions/sociogram" element={<Sociogram/>} />
+                        <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />

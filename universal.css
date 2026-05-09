@@ -13,6 +13,10 @@
     --standard-button-fill: rgb(246, 246, 246);
     /* --header-colour: rgb(144, 144, 144); */
 }
+footer {
+    pointer-events: none;
+    opacity: 20%
+}
 .menuBar {
     /* background-color: var(--accent-colour); */
     background: linear-gradient(rgb(235, 156, 156) 0%, var(--brightest-accent-colour) 25%, var(--accent-colour) 50%, rgb(137, 21, 21) 51%, var(--accent-colour) 100%);

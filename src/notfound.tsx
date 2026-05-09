@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 export function NotFound() {
     return <main>
         <div>
-            <h1 className="notFound">404</h1>
-            <p className="ghost">The page you were looking for was not found.</p>
+            <h1 className="notFound"><i>Feeling peaceful...</i></h1>
+            <p className="ghost">404 — There's nothing here.</p>
         </div>
         <button onClick={() => {
             history.back();
