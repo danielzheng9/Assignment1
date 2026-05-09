@@ -4,8 +4,8 @@ export function Home() {
     const beginningsOfInternet = useRef<HTMLHeadingElement | null>(null);
     return <div className="homeStripe">
             <h1></h1>
-            <h1 className="title">Me and You on the Web</h1>
-            <p>Let's explore how the world wide web works!</p>
+            <h1 className="title">Connecting Me and You</h1>
+            <p>Let's explore how your computer works!</p>
             <NavLink to="/definitions">Go to our definitions</NavLink>
             <button className="linkButton" onClick={() => {
                 beginningsOfInternet.current?.scrollIntoView();
