@@ -1,13 +1,14 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, type NavLinkProps } from "react-router-dom"
 import { useState, useEffect, useCallback, Component } from "react";
-export function LogoFull({...props}: Partial<React.ComponentProps<typeof NavLink>>) {
-    return <NavLink {...props} to="/" className="heading_logo standard noLink">
+import { tagAppend, type ClassyName } from "./utils/tagAppend.js";
+export function LogoFull({className,  ...props}: ClassyName & Partial<NavLinkProps>) {
+    return <NavLink {...props} to="/" className={tagAppend("heading_logo standard noLink", className)}>
         <img className="main-logo" 
         src="https://raw.githubusercontent.com/DOGNET-SUPERB-TECHNOLOGIES/cdn/main/dognetTechnologies.png"/>
     </NavLink>
 }
-export function LogoIcon({...props}: Partial<React.ComponentProps<typeof NavLink>>) {
-    return <NavLink {...props} to="/" className="heading_logo standard noLink">
+export function LogoIcon({className, ...props}: ClassyName & Partial<NavLinkProps>) {
+    return <NavLink {...props} to="/" className={tagAppend("heading_logo standard noLink", className)}>
         <img className="main-logo" 
         src="https://raw.githubusercontent.com/DOGNET-SUPERB-TECHNOLOGIES/cdn/main/favicon.png"/>
     </NavLink>
