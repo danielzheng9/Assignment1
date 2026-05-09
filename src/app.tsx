@@ -29,6 +29,7 @@ import { WhatIsAnEntity } from "./pages/entity.js";
 import { WhatIsARelationship } from "./pages/relationship.js";
 import { Sociogram } from "./pages/sociogram.js";
 import { DigitalCitizenship } from "./pages/digitalCitizenship.js";
+import { Hardware } from "./pages/hardware.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -173,6 +174,7 @@ export function App() {
                         <Route path="/definitions/relationship" element={<WhatIsARelationship/>} />
                         <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
                         <Route path="/definitions/sociogram" element={<Sociogram/>} />
+                        <Route path="/definitions/hardware" element={<Hardware/>} />
                         <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
@@ -183,7 +185,7 @@ export function App() {
                 </Routes>
                 </main>
                 <footer>
-                    <p className="ghost">Copyright 2026 Daniel Zheng, Ethan Skeues. Licensed under the Apache License, Version 2.0</p>
+                    <p className="ghost">Copyright 2026 Daniel, and Ethan. Licensed under the Apache License, Version 2.0</p>
                 </footer>
             </HashRouter>
         </AppContext.Provider>
