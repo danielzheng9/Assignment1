@@ -32,7 +32,7 @@ export function InternetOfMe() {
             On social media content consumption platforms like YouTube or TikTok - Internet of Me is used to maximise engagement by studying what you watch, personalising your feed. These platforms are designed as addiction machines that leverage your emotions to keep you enagaged.
         </p>
         <p>
-            While they offer personalised experiences, because of how the algorithm promotes content - over time, it leads to more extremist, fast paced, controversial content that leads the boundaries of what content is because it generates higher enagement. This leads to teh mass spread of dangerous challenges such as the "tide pod challenge", or misinformation.
+            While they offer personalised experiences, because of how the algorithm promotes content - over time, it leads to more extremist, fast paced, controversial content that leads the boundaries of what content is because it generates higher enagement. This leads to the mass spread of dangerous challenges such as the "tide pod challenge", or misinformation.
         </p>
         <p>
             Prolonged exposure to algorithmic feeds, can cause anxiety, depression, withdrawal symptoms, the need to "stay updated".
