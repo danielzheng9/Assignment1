@@ -28,21 +28,34 @@
             @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
             * {
                 font-family: 'JetBrains Mono', 'Courier New';
+                color: white;
             }
             h1 {
                 color: red;
+            }
+            body {
+                justify-content: center;
+                display: flex;
+            }
+            div {
+                width: 50dvw;
+                padding: 1rem;
+                background-color: darkred;
             }
         </style>
     </noscript>
 </head>
 <body>
     <noscript>
-        <h1>
-            JavaScript is disabled. This website cannot function without it.
-        </h1>
-        <p>
-            Enable JavaScript to allow React to render, or visit this website in an environment where JavaScript can run.
-        </p>
+        <div>
+            <img src="https://raw.githubusercontent.com/DOGNET-SUPERB-TECHNOLOGIES/cdn/main/dognetTechnologies.png" alt="The full text version of our website logo"/>
+            <h1>
+                JavaScript is disabled. This website cannot function without it.
+            </h1>
+            <p>
+                Enable JavaScript to allow React to render, or visit this website in an environment where JavaScript can run.
+            </p>
+        </div>
     </noscript>
     <script type="module" src="./src/mount.tsx"></script>
 </body>
