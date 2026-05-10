@@ -24,5 +24,14 @@ export function ArpanetPage() {
             <p className="ghost">Below is a visualisation of a packet.</p>
             <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3F1ZXN0aW9uNTI1LXBhY2tldC5naWYiLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5MH19fQ==" alt="An ARPANET-style 
             packet."/>
+            <p>
+                Arpanet was established in the University of California, Los Angeles on September 1 of 1969. They sent a message from the University of California, Los Angeles to the Standard Research Institute on October 29 10:30 p.m.
+            </p>
+            <p>
+                The first message was intended to be "LOGIN", but only partially sent as "LO" before the system crashed.
+            </p>
+            <p>
+                After identifying this unexpected bug — a buffer overflow caused by the SDS940 computer, the team fixed the program. An hour later, they sent the full message.
+            </p>
         </>
 }

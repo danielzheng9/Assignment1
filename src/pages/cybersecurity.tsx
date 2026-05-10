@@ -5,5 +5,8 @@ export function Cybersecurity() {
         <p>
             Proper security involves setting up 2 factor authentication, protecting yourself from threats online by not trusting any random software download, and other practices. 
         </p>
+        <p>
+            Businesses use this all the time to ensure they are safe from threats.
+        </p>
     </>
 }

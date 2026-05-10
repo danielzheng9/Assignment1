@@ -143,10 +143,10 @@ export function App() {
      }, 
      {
           title: "Hardware",
-          description: "Hardware",
+          description: "Understand networking utilities",
           linkTo: "/definitions/hardware",
           image: "https://projectcpim2017.wordpress.com/wp-content/uploads/2017/10/software-hardware-5-638ceo-strickler-on-success-beyond-successful-crowdfunding-1.jpg?w=825",
-          minutesToRead: 10
+          minutesToRead: 3
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
