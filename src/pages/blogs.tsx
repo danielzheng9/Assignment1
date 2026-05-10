@@ -10,12 +10,14 @@ export function BlogsPage({blogs}: {blogs: BlogType}) {
         }
         return false;
     })
+    const noResultsFound = filteredBlogs.length <= 0;
     return <>
     <h1 className="searchBarAndTitle">Definitions <input className="search" type="text" placeholder="Search" onChange={(event: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => {
         const target = event.target;
         setSearchTerm(target.value);
     }}/></h1>
-    <p>Click on a definition to read and understand.</p>
+    {noResultsFound ? <p>No results found</p> : <p>Click on a definition to read and understand.</p>}
+    {/* You can't click if there's nothing to click */}
     <Blogs blogs={filteredBlogs}/>
     </>
 }
