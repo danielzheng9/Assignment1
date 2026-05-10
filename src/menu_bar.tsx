@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "./app.js";
 import { DividerBar } from "./DividerBar.js";
 import { Logo } from "./logo.js";
+import { useGlobalOverflow } from "./hooks/useDisplayToggle.js";
 
 export interface MenuButtonProps extends React.ComponentProps<typeof NavLink> {
     children?: React.ReactNode
@@ -26,9 +27,10 @@ export function HamburgerMenuButton({onClick = () => {}}: {onClick?: (toggled: b
 export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => void}) {
     const appContext = useContext(AppContext);
     if (!appContext) return <></>;
+    const useOverflowRef = useGlobalOverflow<HTMLDivElement>();
     const setLoggedIn = appContext?.setIsLoggedIn;
     const isLoggedIn = appContext?.isLoggedIn;
-    return <div className="menuBar">
+    return <div className="menuBar" ref={useOverflowRef}>
         <Logo/>
         <div className="navbar toggle_desktop">
             <div className="miniNavBarGroup">

@@ -32,6 +32,7 @@ import { DigitalCitizenship } from "./pages/digitalCitizenship.js";
 import { Hardware } from "./pages/hardware.js";
 import { Cybersecurity } from "./pages/cybersecurity.js";
 import { Logo, LogoFull } from "./logo.js";
+import { useGlobalOverflow } from "./hooks/useDisplayToggle.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -136,10 +137,10 @@ export function App() {
        }, 
        {
             title: "Cybersecurity",
-            description: "Cybersecurity",
+            description: "Practices businesses or professionals use to stay safe from attacks",
             linkTo: "/definitions/cybersecurity",
             image: "https://miro.medium.com/v2/resize:fit:1400/1*K4sPMOP5AdezW6fMvEtIew@2x.jpeg",
-            minutesToRead: 10
+            minutesToRead: 1
      }, 
      {
           title: "Hardware",

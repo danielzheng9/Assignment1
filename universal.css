@@ -72,6 +72,7 @@ header {
 }
 .menuBar * {
     display: flex;
+    text-wrap: nowrap;
     align-items: center;
 }
 .ghost {
@@ -439,13 +440,11 @@ h1, h2, h3 {
 .toggle_small_screen {
     display: none;
 }
-@media screen and (max-width: 600px) {
-    .toggle_desktop {
-        display: none;
-    }
-    .toggle_small_screen {
-        display: inherit;
-    }
+.doggled .toggle_desktop {
+    display: none;
+}
+.doggled .toggle_small_screen {
+    display: inherit;
 }
 .fa-solid {
     color: white;
