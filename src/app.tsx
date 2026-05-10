@@ -33,6 +33,7 @@ import { Hardware } from "./pages/hardware.js";
 import { Cybersecurity } from "./pages/cybersecurity.js";
 import { Logo, LogoFull } from "./logo.js";
 import { useGlobalOverflow } from "./hooks/useDisplayToggle.js";
+import { WiredTransmission } from "./pages/wiredTransmission.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -148,6 +149,13 @@ export function App() {
           linkTo: "/definitions/hardware",
           image: "https://projectcpim2017.wordpress.com/wp-content/uploads/2017/10/software-hardware-5-638ceo-strickler-on-success-beyond-successful-crowdfunding-1.jpg?w=825",
           minutesToRead: 3
+     }, 
+     {
+          title: "Wired Transmission",
+          description: "Connecting devices together for communication.",
+          linkTo: "/definitions/wired_transmission",
+          image: "https://studyopedia.com/wp-content/uploads/2017/08/Unshielded-Twisted-Pair-Cable.png",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -187,6 +195,7 @@ export function App() {
                         <Route path="/definitions/hardware" element={<Hardware/>} />
                         <Route path="/definitions/cybersecurity" element={<Cybersecurity/>} />
                         <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
+                        <Route path="/definitions/wired_transmission" element={<WiredTransmission/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
