@@ -82,6 +82,6 @@ export function WiredTransmission() {
             Carrier Sense Multiple Access with Collision Avoidance works by waiting a random amount of time before trying to send data again. It also uses Request to Send/Clear to Send, a handshake mechanism adopted in serial communication, and wireless data transmission to avoid collisions. It ensures transmitter only sends data when the receiver is ready. If the channel is free, the device transmits the entire frame of data. After receiving, recipient sends an acknowledgement. If the sender does not find an ACK after a while, it assumes a collision occurred and re transmits.
         </p>
         <h2>Cellular Network</h2>
-        <p>A cellular network is a wireless, land-based telecommunications system distributed over cells</p>
+        <p>A cellular network is a wireless, radio network distributed over land areas known as cells. Each cell contains a fixed location rtransceiver called a base station. The role of is to ensure radio coverage across large geographic areas. The base transceiver station allows nearby celluar devices to communicate with mobile devices. It routes calls to the base center controller.</p>
     </>
 }
