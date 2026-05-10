@@ -70,5 +70,18 @@ export function WiredTransmission() {
             <img className="behaveImage" src="https://cdn.britannica.com/18/85418-004-BDAE4770/Light-ray-fibre.jpg" alt="An open fibre optic wire."/>
             <img className="behaveImage" src="https://images.ctfassets.net/aoyx73g9h2pg/2akZ34C0SwKh3lRZg3u0M5/bbdbf30bbe3d7f6939a78d50df925a28/Single-Mode-vs-Multimode-Fiber-Diagram.jpg" alt="Single mode vs multi mode fibre optic."/>
         </div>
+        <h2>Wi-Fi</h2>
+        <p>
+            Wi-Fi is the family of network protocols from the IEEE 802.11
+            It is the set of standards that defines the physical layer of the network and implements WLAN protocols enabling wireless communication
+        </p>
+        <p>
+            Wi-Fi uses radio waves to transmit data between devices, operating like a two-way radio communication. Wi-Fi operates on 2.4GHz, 5GHz, or more recently 6GHz (Wi-Fi 6E or Wi-Fi 7). It uses Carrier Sense Multiple Access with Collision Avoidance to manage shared airwaves, ensuring devices can communicate without data collision.
+        </p>
+        <p>
+            Carrier Sense Multiple Access with Collision Avoidance works by waiting a random amount of time before trying to send data again. It also uses Request to Send/Clear to Send, a handshake mechanism adopted in serial communication, and wireless data transmission to avoid collisions. It ensures transmitter only sends data when the receiver is ready. If the channel is free, the device transmits the entire frame of data. After receiving, recipient sends an acknowledgement. If the sender does not find an ACK after a while, it assumes a collision occurred and re transmits.
+        </p>
+        <h2>Cellular Network</h2>
+        <p>A cellular network is a wireless, land-based telecommunications system distributed over cells</p>
     </>
 }
