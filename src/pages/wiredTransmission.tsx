@@ -44,5 +44,18 @@ export function WiredTransmission() {
         </div>
         <img className="behaveImage" src="https://image.made-in-china.com/202f0j00mPwUtQiaOoqp/PVC-Insulated-Copper-for-Building-Wire.webp" alt="Copper wires shielded by plastic"/>
         </div>
+        <h2>Coaxial Cable</h2>
+        <p>A coaxial cable is a reliable cable that communicates high frequency radio signals across long distances. It consists of a protective plastic layer, a braided metal conductor that holds an insulator and a copper wire inside the insulator</p>
+        <p>It's designed for minimal signal loss and interference. ISPs commonly use this cable, it is used for connecting satellite dishes, radio transmission, CCTV camera systems, telecom, broadcast industry.</p>
+        <p>
+            The data is transmitted using an alternating current through the central copper core.
+        </p>
+        <img className="behaveImage" src="https://rasantekaudio.com/wp-content/uploads/2024/11/Coaxial-Cable-Construction.webp" alt="A coaxial cable's components being dissected with an opening in the front of the cable, a braided copper shield, a foil shield inside the copper shield, a dielectric and center conductor."/>
+        <p>
+            Fibre optic transmits information via light through thin glass or plastic strands. It prevents signal loss and electromagnetic interference with its internal reflection properties and because it is transmitting with light
+        </p>
+        <p>
+            These are designed for high-<NavLink to="https://en.wikipedia.org/wiki/Speed">speed</NavLink>, high-<NavLink to="/definitions/whatisnetworkbandwidth">bandwidth</NavLink>
+        </p>
     </>
 }
