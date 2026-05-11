@@ -151,6 +151,10 @@ header {
     width: 300px;
     height: auto;
 }
+.obeyParentMealInstructions {
+    width: 0;
+    min-width: 100%;
+}
 .behaveImage {
     max-width: 100%;
     height: fit-content;

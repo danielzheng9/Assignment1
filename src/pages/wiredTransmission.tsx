@@ -94,17 +94,26 @@ export function WiredTransmission() {
         <p>A widely used satellite type involved in position calculation is Global Positioning System.</p>
         <p>A Global Positioning System satellite is a United States owned constellation of 31 satellites at an altitude 20,200 kilometers in the air. These satellites, operated by the United States Space Force, were created in February 22, 1978 to originally provide highly accurate 3D positioning data for military operations.</p>
         <p>
-            In 1983, Korean Air Lines Flight 007 unintentionally steered into Soviet Union airspace and was shot down. Two weeks later, Ronald Reagan (40th United States president from 1981-1989) publicly announced GPS would become available for ordinary civillian use to prevent tragedies in the future. Later in 2000, Bill Clinton (42nd United States President from 1993-2001) on his last two years of being president signed an order to disable the GPS system's inaccuracy.
-            The inaccuracy was imposed to degrade GPS signals used by civilians to limit accuracy to around 100 meters. This practice was supposedly to protect national security by introducing errors into satellite data.
-            Bill Clinton disabled the inaccuracy because the United States military had developed new ways to protect national security without imposing limits on GPS accuracy. Instead, the United States military only jammed the signals in a specific war zone or region while allowing the rest of the world to use full accuracy GPS. Bill Clinton realised the global benefits of accurate GPS outweighed the risks of leaving the signal inaccurate and threatening national security—as they could just jam the signals in a specific area of conflict.
-            Other companies had already bypassed this inaccuracy by developing Differential GPS—it would be useless anyway to keep the inaccuracy on.
+            In 1983, Korean Air Lines Flight 007 unintentionally steered into Soviet Union airspace and was shot down. Two weeks later, Ronald Reagan (40th United States president from 1981-1989) publicly announced Global Positioning System would become available for ordinary civillian use to prevent tragedies in the future. Later in 2000, Bill Clinton (42nd United States President from 1993-2001) on his last two years of being president signed an order to disable the Global Positioning System system's inaccuracy.
+            The inaccuracy was imposed to degrade Global Positioning System signals used by civilians to limit accuracy to around 100 meters. This practice was supposedly to protect national security by introducing errors into satellite data.
+            Bill Clinton disabled the inaccuracy because the United States military had developed new ways to protect national security without imposing limits on Global Positioning System accuracy. Instead, the United States military only jammed the signals in a specific war zone or region while allowing the rest of the world to use full accuracy Global Positioning System. Bill Clinton realised the global benefits of accurate Global Positioning System outweighed the risks of leaving the signal inaccurate and threatening national security—as they could just jam the signals in a specific area of conflict.
+            Other companies had already bypassed this inaccuracy by developing Differential Global Positioning System—it would be useless anyway to keep the inaccuracy on.
             The decision was also influenced by the desire to unleash massive economic growth—it allows different industries to utilise this system with high accuracy, with the potential for faster efficiency and in turn: More money. Money.
             If it was enabled, businesses could track individual shipping containers and vehicles, instead of the GPS being inaccurate and tracking around it.
             This could enable efficiency as well by allowing delivery companies to avoid unnecessary driving routes because of the inaccuracy—saving fuel and fueling the economy instead with that saved fuel.
         </p>
-        <p>
-            Now, how does a GPS satellite work?
-            Fundamentally, the GPS satellite includes an ultra-accurate
-        </p>
+        <div className="flexSide">
+            <div className="flexNormal">
+                <p>
+                    Now, how does a Global Positioning System satellite work?
+                    Fundamentally, the Global Positioning System satellite includes an accurate atomic clock also used in the main time center of the world—it provides a time signal accurate up to a few billionths of a second, or within 50 nanoseconds. The Global Positioning System satellite then sends radio signals to receivers on the ground, devices then receive the input time, subtract it from what they have (current time vs before time), then it calculates the distance by considering the speed of light and the subtracted result with the speed (distance = speed * time) (speed of light * subtracted time).
+                    A device, like your phone might receive signals from atleast three satellites in the Global Positioning System, uses trilateration by calculating the midpoint of the phone's location from those three satellites and stores the result, ready for usage in apps like Map.
+                </p>
+            </div>
+            <div>
+                <img className="behaveImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeZcL-6GEOLe0P4eRZtbnaCSza-I143q3t-Q&s" alt="Three circles with satellites diagram, with two center points being the phone's position." />
+                <p className="ghost obeyParentMealInstructions">The object is the phone in the lefthand side example</p>
+            </div>
+        </div>
     </>
 }
