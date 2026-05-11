@@ -35,6 +35,7 @@ import { Logo, LogoFull } from "./logo.js";
 import { useGlobalOverflow } from "./hooks/useDisplayToggle.js";
 import { WiredTransmission } from "./pages/wiredTransmission.js";
 import { Topology } from "./pages/topology.js";
+import { LocalAreaNetworkAndWideAreaNetwork } from "./pages/localAreaNetworkAndWideAreaNetwork.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -162,6 +163,13 @@ export function App() {
           title: "Topology",
           description: "The arrangement of your devices",
           linkTo: "/definitions/topology",
+          image: "https://automationcommunity.com/wp-content/uploads/2023/01/Network-Topology-scaled-3.jpg",
+          minutesToRead: 5
+     },
+     {
+          title: "LAN and WAN",
+          description: "Different network capabilities",
+          linkTo: "/definitions/lanandwan",
           image: "",
           minutesToRead: 1
      }
@@ -207,6 +215,7 @@ export function App() {
                         <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
                         <Route path="/definitions/wired_transmission" element={<WiredTransmission/>} />
                         <Route path="/definitions/topology" element={<Topology/>} />
+                        <Route path="/definitions/lanandwan" element={<LocalAreaNetworkAndWideAreaNetwork/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
