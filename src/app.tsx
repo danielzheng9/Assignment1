@@ -36,6 +36,7 @@ import { useGlobalOverflow } from "./hooks/useDisplayToggle.js";
 import { WiredTransmission } from "./pages/wiredTransmission.js";
 import { Topology } from "./pages/topology.js";
 import { LocalAreaNetworkAndWideAreaNetwork } from "./pages/localAreaNetworkAndWideAreaNetwork.js";
+import { ClientAndServerModel } from "./pages/clientAndServerModel.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -170,7 +171,14 @@ export function App() {
           title: "LAN and WAN",
           description: "Different network capabilities",
           linkTo: "/definitions/lanandwan",
-          image: "",
+          image: "https://static.linuxblog.io/wp-content/uploads/2025/07/Network_Rack_for_Small_Office__article_footer-868x1019.png",
+          minutesToRead: 1
+     },
+     {
+          title: "Client and Server Model",
+          description: "Understand the separation between you and the service",
+          linkTo: "/definitions/clientandservermodel",
+          image: "https://i.sstatic.net/jyync.jpg",
           minutesToRead: 1
      }
     ]);
@@ -216,6 +224,7 @@ export function App() {
                         <Route path="/definitions/wired_transmission" element={<WiredTransmission/>} />
                         <Route path="/definitions/topology" element={<Topology/>} />
                         <Route path="/definitions/lanandwan" element={<LocalAreaNetworkAndWideAreaNetwork/>} />
+                        <Route path="/definitions/clientandservermodel" element={<ClientAndServerModel/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
