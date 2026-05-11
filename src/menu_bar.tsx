@@ -69,15 +69,22 @@ export function MenuNavLinkDisplay({className, ...props}: {className: string} & 
         if (path.length === 0) return undefined;
         return true;
     });
-    if (PathnameSplit.length === 0 || pathname === "/404_not_found") return <></>;
+    if (PathnameSplit.length === 0 || pathname === "/404_not_found") return <></>; // React Fragment. Does nothing.
     // return <>{ resourceStringMap[location.pathname] ? <div className="navigation">
     //         {resourceStringMap[location.pathname] ?? "Unknown Page"}
     //     </div> : <></>}</>
+
+    // {...props} is JS destructuring.
+    // It converts a key-value pair into named values. React uses this effectively. {dog = 1, bark = 2} becomes dog=1, bark=2
     return <div {...props} className={`navigation ${className}`}>{PathnameSplit.flatMap((thisPlace: string, index: number) => {
         const thisArray = [];
         if (index > 0) {
             thisArray.push(<p className="light" key={index * 2} aria-hidden="true">{">"}</p>);
-        }
+        } /* This avoids the first entry so it doesn't look like this:
+        > Definitions > Dog
+        And instead looks like this:
+        Definitions > Dog
+        */
 
         return [...thisArray, <NavLink key={index * 2 + 1} className="grey" to={PathnameSplit.slice(0, index + 1).join("/")}>{thisPlace.charAt(0).toUpperCase() + thisPlace.slice(1)}</NavLink>]
     })}</div>

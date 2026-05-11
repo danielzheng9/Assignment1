@@ -160,7 +160,7 @@ export function App() {
      },
      {
           title: "Topology",
-          description: "Understand how location works",
+          description: "The arrangement of your devices",
           linkTo: "/definitions/topology",
           image: "",
           minutesToRead: 1
@@ -168,6 +168,8 @@ export function App() {
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
+    // This file uses HashRouter because I do not have a backend to run this in, and avoids empty pages with BrowserRouter.
+    // The routing system uses /# to route, which is ignored by the browser and still redirects to whatever is before it.
     return <AppContext.Provider value={{
             isLoggedIn: loggedIn, setIsLoggedIn: setLoggedIn
         }}>            
