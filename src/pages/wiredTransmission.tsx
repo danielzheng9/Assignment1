@@ -86,9 +86,12 @@ export function WiredTransmission() {
             A cellular network is a wireless, radio network distributed over land areas known as cells. Each cell contains a fixed location transceiver called a base station. The role of is to ensure radio coverage across large geographic areas. The base transceiver station allows nearby celluar devices to communicate with mobile devices. It routes calls to the base center controller. Cellular networks are distributed over small geographic areas called cells to manage limited radio frequencies by reusing them, and allow for high user density. The cellular network works with mobile devices to allow them to communicate via radio waves, transitioning seamlessly between cells for uninterrupted coverage. An average cell tower can reach up to 72 kilometers away, but the coverage is heavily dependent on nearby obstructions like buildings, wind, tree cover, weather. The cells in cellular network are hexagonal areas of land served by a trasceiver who can transmit and receive signals.
         </p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTZG5o1-OAFiMgwNrlEgECZD4npSRlgB7mA&s" alt="A cellular network tower"/>
-        <h2>A satellite is any object that orbits a celestial body.</h2>
+        <h2>Satellites</h2>
+        <p>A satellite is any object that orbits a celestial body.</p>
         <p>The moon and sun is a natural satellite, and it is not limited to just technology.</p>
         <p>Since humans have arrived on Earth, we have deployed various variations of technological satellites.</p>
+        <p>In technology, satellites are used for systems that wouldn't work on Earth as it would on the air. It allows for an unobstructed view of the Earth due to its high altitude, constant orbiting around the Earth with no obstructions—allowing for things like communication and the internet, Earth observation (weather, polar ice melting, volcanoes, ...)</p>
+        <p>A widely used satellite type involved in position calculation is Global Positioning System.</p>
         <p>A Global Positioning System satellite is a United States owned constellation of 31 satellites at an altitude 20,200 kilometers in the air. These satellites, operated by the United States Space Force, were created in February 22, 1978 to originally provide highly accurate 3D positioning data for military operations.</p>
         <p>
             In 1983, Korean Air Lines Flight 007 unintentionally steered into Soviet Union airspace and was shot down. Two weeks later, Ronald Reagan (40th United States president from 1981-1989) publicly announced GPS would become available for ordinary civillian use to prevent tragedies in the future. Later in 2000, Bill Clinton (42nd United States President from 1993-2001) on his last two years of being president signed an order to disable the GPS system's inaccuracy.
@@ -98,6 +101,10 @@ export function WiredTransmission() {
             The decision was also influenced by the desire to unleash massive economic growth—it allows different industries to utilise this system with high accuracy, with the potential for faster efficiency and in turn: More money. Money.
             If it was enabled, businesses could track individual shipping containers and vehicles, instead of the GPS being inaccurate and tracking around it.
             This could enable efficiency as well by allowing delivery companies to avoid unnecessary driving routes because of the inaccuracy—saving fuel and fueling the economy instead with that saved fuel.
+        </p>
+        <p>
+            Now, how does a GPS satellite work?
+            Fundamentally, the GPS satellite includes an ultra-accurate
         </p>
     </>
 }
