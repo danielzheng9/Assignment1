@@ -115,5 +115,19 @@ export function WiredTransmission() {
                 <p className="ghost obeyParentMealInstructions">The object is the phone in the lefthand side example</p>
             </div>
         </div>
+        <h2>Bluetooth</h2>
+        <p>
+            Bluetooth is a short-range wireless communication standard used for exchanging data between consumer devices over short distances as long as 100 meters (for Bluetooth 6.0), and 10 meters for older standards via a 2.4GHz wireless link.
+        </p>
+        <img className="behaveImage" src="https://www.bluetooth.com/wp-content/uploads/2019/04/Bluetooth_FM_Color.png" alt="Bluetooth logo"/>
+        <p>
+            Bluetooth piconets use a master + slave model to control when and where devices can send data.
+            A single master device can be connected to multiple slave devices. A slave device can only be connected to a master device and cannot be connected to another slave device in the piconet.
+            The master coordinates communication throughout this piconet. Every Bluetooth device has a unique 48-bit address, abbreviated as BD_ADDR. The first 24 bits is an Organisation Unique Identifier, which identifies the manufacturer. The last 24 bits are the device-specific address—these bits change for every device, and no device can have the same address as another.
+        </p>
+        <img className="behaveImage" src="https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.625,f_auto,h_214,q_auto,w_380/c_pad,h_214,w_380/F8417484-01?pgw=1" alt="A bluetooth chip with MAC printed on it"/>
+        <p>
+            MAC is the address.
+        </p>
     </>
 }
