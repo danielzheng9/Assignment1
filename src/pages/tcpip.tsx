@@ -7,7 +7,7 @@ export function TransmissionControlProtocolSlashInternetProtocol() {
             TCP/IP protocol is a collection of communication protocols used to connect network devices on a network.
         </p>
         <p>
-            TCP defines how your data is processed before and after sending it somewhere on the internet. TCP provides reliable, and ordered data delivery. UDP is a different protocol not to be confused—and sends data immediately, often ignoring order and prioritising speed for realtime applications.
+            TCP defines how your data is processed before and after sending it somewhere on the internet. TCP provides reliable, and ordered data delivery. UDP is a different protocol not to be confused with TCP—unlike TCP, it sends data immediately, often ignoring order and prioritising speed for realtime applications.
         </p>
         <p>
             TCP ensures data is received through processes like TCP <NavLink to="/definitions/handshaking">handshakes</NavLink>.
