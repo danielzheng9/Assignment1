@@ -37,6 +37,7 @@ import { WiredTransmission } from "./pages/wiredTransmission.js";
 import { Topology } from "./pages/topology.js";
 import { LocalAreaNetworkAndWideAreaNetwork } from "./pages/localAreaNetworkAndWideAreaNetwork.js";
 import { ClientAndServerModel } from "./pages/clientAndServerModel.js";
+import { CommunicationProtocols } from "./pages/communicationprotocol.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -180,6 +181,13 @@ export function App() {
           linkTo: "/definitions/clientandservermodel",
           image: "https://i.sstatic.net/jyync.jpg",
           minutesToRead: 1
+     },
+     {
+          title: "Communication Protocols",
+          description: "Unified systems meet collaboration and higher efficiency from labour additions",
+          linkTo: "/definitions/communicationprotocols",
+          image: "https://miro.medium.com/v2/1*KfPYDz61kR1_rd1woOoALg.png",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -225,6 +233,7 @@ export function App() {
                         <Route path="/definitions/topology" element={<Topology/>} />
                         <Route path="/definitions/lanandwan" element={<LocalAreaNetworkAndWideAreaNetwork/>} />
                         <Route path="/definitions/clientandservermodel" element={<ClientAndServerModel/>} />
+                         <Route path="/definitions/communicationprotocols" element={<CommunicationProtocols/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
