@@ -48,13 +48,22 @@ export function Home() {
                         Websites often featured badges saying they were best experienced in a specific browser because the developers did not want to spend time trying to make a website that works on both browsers—as they diverged in functionality significantly. Java Applets were introduced. DHTML (Dynamic Hypertext Markup Language) was introduced with Microsoft Internet Explorer 4 defining the stack of HTML, JavaScript, CSS for marketing—to show the features of Internet Explorer 4. Netflix was founded. Microsoft bought Hotmail. IEEE 802.11 was created for consumers to use. The WoRld Wide Web Consortium published the HTML 4 standard.
                     </p>
                     <p>
-
-                    </p>
-                    <p>
-
+                        Google was incorporated into a commercial company for searching queries on the web. Amazon became an online retail store rather than only selling books to create a limitless, centralised marketplace. Many search engines were released, and marketed as portals. Web standards were finalised (CSS2, XML, DOM) to unify how the web looks. Microsoft saw the threat of antitrust laws developing at this time.
                     </p>
                     <p>
                         {"Java applets API <applet> was deprecated."}
+                    </p>
+                </TimelineYearCard>
+                <TimelineYearCard yearDate="2000">
+                    <p>The Y2K bug, a flaw where computer dates at the time were interpreted as two digits. This would mean, when the year 2000 was reached—the year would display as 1900. This bug was present in vital systems and security systems. People were fearing that society would collapse—people stockpiled on food and water.</p>
+                    <p>
+                        Governments and businesses spent billions of dollars to fix faulty code.
+                    </p>
+                    <p>
+                        The reason why digits were interpreted as two digits was because in 1960 and 1970, computer memory costed $100 per kilobyte. Programmers used two digit codes for the year to save space. Developers did not expect this software would be used many years later—they assumed the software would be replaced before 2000.
+                    </p>
+                    <p>
+                        Peer to peer file sharing filled the media, Neopets was popularised.
                     </p>
                 </TimelineYearCard>
                 </div>
