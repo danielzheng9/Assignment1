@@ -19,7 +19,7 @@ export function Blogs({blogs}: {blogs: BlogType}) {
                             <BlogTitle>{thisBlog.title}</BlogTitle>
                             {thisBlog.description ? <BlogDescription>{thisBlog.description}</BlogDescription> : <></> }
                             <div className="bottomHalf">
-                                <img src={thisBlog.image}></img>
+                                <img src={thisBlog.image} alt="The definition's thumbnail"></img>
                                 {thisBlog.minutesToRead ? <MinuteToReadTime mins={thisBlog.minutesToRead}/> : <></> }
                             </div>
                         </BlogCard>

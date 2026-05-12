@@ -40,6 +40,7 @@ import { ClientAndServerModel } from "./pages/clientAndServerModel.js";
 import { CommunicationProtocols } from "./pages/communicationprotocol.js";
 import { Handshaking } from "./pages/handshaking.js";
 import { TransmissionControlProtocolSlashInternetProtocol } from "./pages/tcpip.js";
+import { DomainNameSystem } from "./pages/dns.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -204,6 +205,13 @@ export function App() {
           linkTo: "/definitions/transmissioncontrolprotocolandinternetprotocol",
           image: "https://cdn.kastatic.org/ka-perseus-images/55020ff0c8a236c7bc95847d2a132ce4a60331f8.png",
           minutesToRead: 5
+     },
+     {
+          title: "Domain Name System",
+          description: "google.com isn't actually google. it's 172.217.25.174",
+          linkTo: "/definitions/domainnamesystem",
+          image: "https://cdn.arstechnica.net/wp-content/uploads/2013/12/server-racks.jpg",
+          minutesToRead: 2
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -252,6 +260,7 @@ export function App() {
                          <Route path="/definitions/communicationprotocols" element={<CommunicationProtocols/>} />
                          <Route path="/definitions/handshaking" element={<Handshaking/>} />
                          <Route path="/definitions/transmissioncontrolprotocolandinternetprotocol" element={<TransmissionControlProtocolSlashInternetProtocol/>} />
+                         <Route path="/definitions/domainnamesystem" element={<DomainNameSystem/>} />
                         <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                         <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                         <Route path="/login" element={<Login/>} />
