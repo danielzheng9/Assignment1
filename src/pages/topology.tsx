@@ -46,5 +46,16 @@ export function Topology() {
         <h2>
             Hybrid Topology
         </h2>
+        <p>
+            Hybrid topology mixes different types of topologies. A hybrid network might include a star, and a bus structure for a specific application.
+        </p>
+        <img className="behaveImage" src="https://media.geeksforgeeks.org/wp-content/uploads/20220616225313/hybrid1.jpg" alt="Hybrid topology graph"/>
+        <h2>
+            Navigation Map
+        </h2>
+        <p>
+            A navigation map in computing applications defines a visual representation of network components and connections. It highlights how nodes connect, and as Navigation in the name suggests—it describes the navigation between nodes—the routes.
+            It allows IT technicians to easily get a glance of what the network looks like, and maintain infrastructures. It can help with identifying bottlenecks, fixing weird topology, adding redundancy for reliability, etc. 
+        </p>
     </>
 }
