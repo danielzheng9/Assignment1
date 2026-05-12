@@ -36,9 +36,26 @@ export function Home() {
                     Amazon, and eBay were launched.
                     <p>JavaScript was introduced on December 4. It allowed for more reactive and interactive webpages. JavaScript was named that way to ride the hype of Java. It was created by Brendan Eich, where he wanted to embed the Scheme programming language in the web—a Lisp-like functional language—but, his managers insisted him to create a syntax similar to Java.</p>
                     <p>Basically, it was made to confuse developers and regular people because of marketing.</p>
+                    <p>
+                        Java Applets were introduced.
+                    </p>
                 </TimelineYearCard>
-                <TimelineYearCard yearDate="1996">
-                    
+                <TimelineYearCard yearDate="1996-1999">
+                    <p>
+                        Web safe design was an emerging trend, the Internet Archive was born, Hotmail was released, CSS was introduced.
+                    </p>
+                    <p>
+                        Websites often featured badges saying they were best experienced in a specific browser because the developers did not want to spend time trying to make a website that works on both browsers—as they diverged in functionality significantly. Java Applets were introduced. DHTML (Dynamic Hypertext Markup Language) was introduced with Microsoft Internet Explorer 4 defining the stack of HTML, JavaScript, CSS for marketing—to show the features of Internet Explorer 4. Netflix was founded. Microsoft bought Hotmail. IEEE 802.11 was created for consumers to use. The WoRld Wide Web Consortium published the HTML 4 standard.
+                    </p>
+                    <p>
+
+                    </p>
+                    <p>
+
+                    </p>
+                    <p>
+                        {"Java applets API <applet> was deprecated."}
+                    </p>
                 </TimelineYearCard>
                 </div>
             </div>
