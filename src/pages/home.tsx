@@ -66,6 +66,25 @@ export function Home() {
                         Peer to peer file sharing filled the media, Neopets was popularised.
                     </p>
                 </TimelineYearCard>
+                <TimelineYearCard yearDate="2001-2010">
+                    <p>Wikipedia launched. Apple iTunes launched. Broadband 3G was adopted over dial-up. Linkedn was launched.</p>
+                    <p>Facebook was launched, YouTube was launched, Web 2.0 was launched, Google was launched, Twitter was launched.</p>
+                    <p>The iPhone was launched, the Apple App Store was launched, the Android Market was launched. Instagram was launched, cleaner corporate web design was launched.</p>
+                </TimelineYearCard>
+                <TimelineYearCard yearDate="2011-2015">
+                    The internet shifted from desktop focused development to mobile phone development. In 2012, Vine was created.
+                    <p>HTML5 was standardised, HTTP/2 was standardised. 4G LTE rolled out. IPv6 was launched to fix the issue of IPv4 addresses running out. Cloud infrastructure was hyped (SaaS)</p>
+                    <p>React was created in 2013. Google created AngularJS in 2010. Docker was created. HTTPS was the default standard due to the inherit vulnerable nature of HTTP</p>
+                </TimelineYearCard>
+                <TimelineYearCard yearDate="2015-2026">
+                    <p>The European Union's General Data Protection Regulation described the necessity for cookie banners that ask what cookies to store on your device.</p>
+                    <p>During the pandemic, COVID-19 sparked the internet even more—Zoom became a well known name. TikTok was fueled because of this.</p>
+                    <p>HTTP/3 replaced TCP with a UDP system (Quick User Datagram Protocol Internet Connection)</p>
+                    <p>ChatGPT was originally for enterprise work, and they released a demo with Google's Attention Neural Network being used in an LLM. People thought it was sentient, people were intrigued by the ability of a foreign piece of tech that could talk and feel alive. It made gathering info easier. Google's AI Overview recommended people to eat rocks, and put glue on cheese pizza.</p>
+                    <p>
+                        5G was developed. 6G was standardised in 2026.
+                    </p>
+                </TimelineYearCard>
                 </div>
             </div>
         </div>
