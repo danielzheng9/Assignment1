@@ -10,7 +10,7 @@ export function TransmissionControlProtocolSlashInternetProtocol() {
             TCP defines how your data is processed before and after sending it somewhere on the internet. TCP provides reliable, and ordered data delivery. UDP is a different protocol not to be confused—and sends data immediately, often ignoring order and prioritising speed for realtime applications.
         </p>
         <p>
-            TCP ensures data is received through processes like TCP <NavLink to="/definition/handshaking">handshakes</NavLink>.
+            TCP ensures data is received through processes like TCP <NavLink to="/definitions/handshaking">handshakes</NavLink>.
             TCP communicates with other side to ensure they are using the same technology and processes, and is the stack layer of which technologies are used.
             TCP isn't fixed to a single definition—it uses those definitions and tries to coordinate everyone with them—but it still follows strict Request for Comments standards to ensure global compatibility and that you're not using some foreign unsupported technology like Dog Text Transfer Protocol instead of HTTPS.
         </p>
