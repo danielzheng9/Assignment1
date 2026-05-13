@@ -42,6 +42,7 @@ import { Handshaking } from "./pages/handshaking.js";
 import { TransmissionControlProtocolSlashInternetProtocol } from "./pages/tcpip.js";
 import { DomainNameSystem } from "./pages/dns.js";
 import { HyperTextTransferProtocol } from "./pages/http.js";
+import { HypertextMarkupLanguage } from "./pages/html.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -220,6 +221,13 @@ export function App() {
           linkTo: "/definitions/hypertexttransferprotocol",
           image: "https://substackcdn.com/image/fetch/$s_!2s7A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7140c6e1-4315-45cf-8648-d7685219bc6b_1938x1116.png",
           minutesToRead: 1
+     },
+     {
+          title: "HTML",
+          description: "Your webpage is represented through text—every button, every link",
+          linkTo: "/definitions/hypertextmarkuplanguage",
+          image: "https://cdn.britannica.com/94/123894-050-53EC378E/Tim-Berners-Lee-2005.jpg",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -270,6 +278,7 @@ export function App() {
                     <Route path="/definitions/transmissioncontrolprotocolandinternetprotocol" element={<TransmissionControlProtocolSlashInternetProtocol/>} />
                     <Route path="/definitions/domainnamesystem" element={<DomainNameSystem/>} />
                     <Route path="/definitions/hypertexttransferprotocol" element={<HyperTextTransferProtocol/>} />
+                    <Route path="/definitions/hypertextmarkuplanguage" element={<HypertextMarkupLanguage/>} />
                     <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                     <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                     <Route path="/login" element={<Login/>} />
