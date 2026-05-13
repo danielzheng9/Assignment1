@@ -41,6 +41,7 @@ import { CommunicationProtocols } from "./pages/communicationprotocol.js";
 import { Handshaking } from "./pages/handshaking.js";
 import { TransmissionControlProtocolSlashInternetProtocol } from "./pages/tcpip.js";
 import { DomainNameSystem } from "./pages/dns.js";
+import { HyperTextTransferProtocol } from "./pages/http.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -212,6 +213,13 @@ export function App() {
           linkTo: "/definitions/domainnamesystem",
           image: "https://cdn.arstechnica.net/wp-content/uploads/2013/12/server-racks.jpg",
           minutesToRead: 2
+     },
+     {
+          title: "HTTP",
+          description: "Explore the logic and ways of data transfer",
+          linkTo: "/definitions/hypertexttransferprotocol",
+          image: "https://substackcdn.com/image/fetch/$s_!2s7A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7140c6e1-4315-45cf-8648-d7685219bc6b_1938x1116.png",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -236,36 +244,37 @@ export function App() {
                 <main>
                 <Routes>
                     {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
-                        <Route path="/" element={<Home/>} />
-                        <Route path="/definitions/arpanet" element={<ArpanetPage/>} />
-                        <Route path="/definitions/whatisnetworkbandwidth" element={<WhatIsNetworkBandwidth/>} />
-                        <Route path="/definitions/decimal" element={<DecimalPage/>} />
-                        <Route path="/definitions/binary" element={<Binary/>} />
-                        <Route path="/definitions/ascii" element={<ASCII/>} />
-                        <Route path="/definitions/datavsinformation" element={<WhatIsInformation/>} />
-                        <Route path="/definitions/unitsofstorage" element={<UnitsOfStorage/>} />
-                        <Route path="/definitions/cloudbasedstorage" element={<WhatIsCloudBasedStorage/>} />
-                        <Route path="/definitions/internetofme" element={<InternetOfMe/>} />
-                        <Route path="/definitions/socialnetworks" element={<WhatIsASocialNetwork/>} />
-                        <Route path="/definitions/relationship" element={<WhatIsARelationship/>} />
-                        <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
-                        <Route path="/definitions/sociogram" element={<Sociogram/>} />
-                        <Route path="/definitions/hardware" element={<Hardware/>} />
-                        <Route path="/definitions/cybersecurity" element={<Cybersecurity/>} />
-                        <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
-                        <Route path="/definitions/wired_transmission" element={<WiredTransmission/>} />
-                        <Route path="/definitions/topology" element={<Topology/>} />
-                        <Route path="/definitions/lanandwan" element={<LocalAreaNetworkAndWideAreaNetwork/>} />
-                        <Route path="/definitions/clientandservermodel" element={<ClientAndServerModel/>} />
-                         <Route path="/definitions/communicationprotocols" element={<CommunicationProtocols/>} />
-                         <Route path="/definitions/handshaking" element={<Handshaking/>} />
-                         <Route path="/definitions/transmissioncontrolprotocolandinternetprotocol" element={<TransmissionControlProtocolSlashInternetProtocol/>} />
-                         <Route path="/definitions/domainnamesystem" element={<DomainNameSystem/>} />
-                        <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
-                        <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
-                        <Route path="/login" element={<Login/>} />
-                        <Route path="/signup" element={<Signup/>} />
-                        <Route path="*" element={<NotFound />}/>
+                    <Route path="/" element={<Home/>} />
+                    <Route path="/definitions/arpanet" element={<ArpanetPage/>} />
+                    <Route path="/definitions/whatisnetworkbandwidth" element={<WhatIsNetworkBandwidth/>} />
+                    <Route path="/definitions/decimal" element={<DecimalPage/>} />
+                    <Route path="/definitions/binary" element={<Binary/>} />
+                    <Route path="/definitions/ascii" element={<ASCII/>} />
+                    <Route path="/definitions/datavsinformation" element={<WhatIsInformation/>} />
+                    <Route path="/definitions/unitsofstorage" element={<UnitsOfStorage/>} />
+                    <Route path="/definitions/cloudbasedstorage" element={<WhatIsCloudBasedStorage/>} />
+                    <Route path="/definitions/internetofme" element={<InternetOfMe/>} />
+                    <Route path="/definitions/socialnetworks" element={<WhatIsASocialNetwork/>} />
+                    <Route path="/definitions/relationship" element={<WhatIsARelationship/>} />
+                    <Route path="/definitions/entity" element={<WhatIsAnEntity/>} />
+                    <Route path="/definitions/sociogram" element={<Sociogram/>} />
+                    <Route path="/definitions/hardware" element={<Hardware/>} />
+                    <Route path="/definitions/cybersecurity" element={<Cybersecurity/>} />
+                    <Route path="/definitions/digitalcitizenship" element={<DigitalCitizenship/>} />
+                    <Route path="/definitions/wired_transmission" element={<WiredTransmission/>} />
+                    <Route path="/definitions/topology" element={<Topology/>} />
+                    <Route path="/definitions/lanandwan" element={<LocalAreaNetworkAndWideAreaNetwork/>} />
+                    <Route path="/definitions/clientandservermodel" element={<ClientAndServerModel/>} />
+                    <Route path="/definitions/communicationprotocols" element={<CommunicationProtocols/>} />
+                    <Route path="/definitions/handshaking" element={<Handshaking/>} />
+                    <Route path="/definitions/transmissioncontrolprotocolandinternetprotocol" element={<TransmissionControlProtocolSlashInternetProtocol/>} />
+                    <Route path="/definitions/domainnamesystem" element={<DomainNameSystem/>} />
+                    <Route path="/definitions/hypertexttransferprotocol" element={<HyperTextTransferProtocol/>} />
+                    <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
+                    <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
+                    <Route path="/login" element={<Login/>} />
+                    <Route path="/signup" element={<Signup/>} />
+                    <Route path="*" element={<NotFound />}/>
                         {/* <Route path="*" element={<Navigate to="/404_not_found" replace={false} state/>} /> */}
                 </Routes>
                 </main>
