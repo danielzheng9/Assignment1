@@ -5,7 +5,9 @@ export function Home() {
     const beginningsOfInternet = useRef<HTMLHeadingElement | null>(null);
     return <div className="homeStripe">
             <h1></h1>
-            <h1 className="title">Connecting Me and You</h1>
+            <h1 className="title">
+                Connecting <span className="autoCorrect">mMe</span> and <span className="autoCorrect">U</span>
+            </h1>
             <p>Let's explore how your computer works!</p>
             <NavLink to="/definitions">Go to our definitions</NavLink>
             <button className="linkButton" onClick={() => {
@@ -77,12 +79,22 @@ export function Home() {
                     <p>React was created in 2013. Google created AngularJS in 2010. Docker was created. HTTPS was the default standard due to the inherit vulnerable nature of HTTP</p>
                 </TimelineYearCard>
                 <TimelineYearCard yearDate="2015-2026">
+                    <p>Tailwind CSS was founded.</p>
                     <p>The European Union's General Data Protection Regulation described the necessity for cookie banners that ask what cookies to store on your device.</p>
                     <p>During the pandemic, COVID-19 sparked the internet even more—Zoom became a well known name. TikTok was fueled because of this.</p>
                     <p>HTTP/3 replaced TCP with a UDP system (Quick User Datagram Protocol Internet Connection)</p>
                     <p>ChatGPT was originally for enterprise work, and they released a demo with Google's Attention Neural Network being used in an LLM. People thought it was sentient, people were intrigued by the ability of a foreign piece of tech that could talk and feel alive. It made gathering info easier. Google's AI Overview recommended people to eat rocks, and put glue on cheese pizza.</p>
                     <p>
-                        5G was developed. 6G was standardised in 2026.
+                        An LLM stands for Large Language Model. It refers to any neural network that has the capability to process language coherently as a large-scale computation project.
+                        ChatGPT & other LLMs would often lack detail when producing output. In a post by Adam Watham (the founder of Tailwind CSS) sent a tweet to jokingly apologise "I'd like to formally apologize for making every button in Tailwind UI `bg-indigo-500` five years ago, leading to every AI generated UI on earth also being indigo." in August 2025.
+                        LLMs would often make hovering card effects that transform the whole element, and putting on this on non-interactible elements would confuse users—they would think it is clickable from the micro interation—while it isn't.
+                        They would also often place comments in every line of code, stating the obvious—the LLMs being trained on documentation practices would lead to this issue, along with an earlier issue that lead to LLMs omitting code from the rest of the program and placing /* Rest of the code remains the same... */, making it annoying and frustrating to use.
+                    </p>
+                    <p>
+                        Large businesses with disconnect from the realities of the product use AI as a marketing term, even on products that are physically impossible to possess them. AI is a frequently trending term as of 2023-present.
+                    </p>
+                    <p>
+                        5G was developed. 6G was standardised in 2026 and includes AI?
                     </p>
                 </TimelineYearCard>
                 </div>

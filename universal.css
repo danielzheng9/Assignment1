@@ -94,6 +94,9 @@ header {
 }
 .homeStripe .title {
     color: var(--opposite-accent-colour);
+}
+.title .autoCorrect {
+    color: var(--accent-colour);
     text-decoration: wavy underline;
     text-decoration-color: var(--accent-colour);
 }
