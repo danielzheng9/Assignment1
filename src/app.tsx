@@ -50,6 +50,7 @@ import { Trojan } from "./pages/trojan.js";
 import { SocialEngineering } from "./pages/socialengineering.js";
 import { Firewall } from "./pages/firewall.js";
 import { VirtualPrivateNetwork } from "./pages/virtualPrivateNetwork.js";
+import { EncryptionAndTwoFactorAuthentication } from "./pages/encryptionAndTwoFactorAuthentication.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -284,6 +285,13 @@ export function App() {
           linkTo: "/definitions/virtualprivatenetwork",
           image: "https://assets.bytebytego.com/diagrams/0052-how-a-vpn-works.png",
           minutesToRead: 1
+     },
+     {
+          title: "Encryption and Two-Factor Authentication",
+          description: "Protecting your data from onlookers and criminals",
+          linkTo: "/definitions/encryptionandtwofactorauthentication",
+          image: "https://tlnews.com.au/wp-content/uploads/2021/01/Lovelocks-scaled.jpg",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -343,6 +351,7 @@ export function App() {
                     <Route path="/definitions/socialengineering" element={<SocialEngineering/>} />
                     <Route path="/definitions/virtualprivatenetwork" element={<VirtualPrivateNetwork/>} />
                     <Route path="/definitions/firewall" element={<Firewall/>} />
+                    <Route path="/definitions/encryptionandtwofactorauthentication" element={<EncryptionAndTwoFactorAuthentication/>} />
                     <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                     <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                     <Route path="/login" element={<Login/>} />
