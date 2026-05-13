@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { TimelineYearCard } from "../timelineYearCard.js";
-export function Home() {
+export function Home({scrollToBottom}: {scrollToBottom?: boolean}) {
     const beginningsOfInternet = useRef<HTMLHeadingElement | null>(null);
+    useEffect(() => {
+        if (!scrollToBottom) return;
+        beginningsOfInternet.current?.scrollIntoView();
+    }, [useLocation()]) // dependency array is not really that useful here because the element is disappearing anyway
     return <div className="homeStripe">
             <h1></h1>
             <h1 className="title">
@@ -10,9 +14,10 @@ export function Home() {
             </h1>
             <p>Let's explore how your computer works!</p>
             <NavLink to="/definitions">Go to our definitions</NavLink>
-            <button className="linkButton" onClick={() => {
+            {/* <button className="linkButton" onClick={() => {
                 beginningsOfInternet.current?.scrollIntoView();
-            }}>Explore the timeline</button>
+            }}>Explore the timeline</button> */}
+            <NavLink to="/timeline">Explore the timeline</NavLink>
             
             <div className="FullHeightSpacer"/>
             <div className="flexNormal timelessPage">
@@ -83,7 +88,7 @@ export function Home() {
                     <p>The European Union's General Data Protection Regulation described the necessity for cookie banners that ask what cookies to store on your device.</p>
                     <p>During the pandemic, COVID-19 sparked the internet even more—Zoom became a well known name. TikTok was fueled because of this.</p>
                     <p>HTTP/3 replaced TCP with a UDP system (Quick User Datagram Protocol Internet Connection)</p>
-                    <p>ChatGPT was originally for enterprise work, and they released a demo with Google's Attention Neural Network being used in an LLM. People thought it was sentient, people were intrigued by the ability of a foreign piece of tech that could talk and feel alive. It made gathering info easier. Google's AI Overview recommended people to eat rocks, and put glue on cheese pizza.</p>
+                    <p>ChatGPT was originally for enterprise work, and they released a demo with Google's Attention Neural Network being used in an LLM. The technology was massively promoted as a tool that can speak, people were intrigued by the ability of a foreign piece of tech that could talk and feel alive. It made gathering info easier. Google's AI Overview recommended people to eat rocks, and put glue on cheese pizza. Though, LLMs and AI Neural Networks in general have the tendency to hallucinate—make up false information, because of the way they are designed.</p>
                     <p>
                         An LLM stands for Large Language Model. It refers to any neural network that has the capability to process language coherently as a large-scale computation project.
                         ChatGPT & other LLMs would often lack detail when producing output. In a post by Adam Watham (the founder of Tailwind CSS) sent a tweet to jokingly apologise "I'd like to formally apologize for making every button in Tailwind UI `bg-indigo-500` five years ago, leading to every AI generated UI on earth also being indigo." in August 2025.

@@ -35,6 +35,7 @@ export function MenuBar({toggleMiniNav}: {toggleMiniNav: (toggled: boolean) => v
         <div className="navbar toggle_desktop">
             <div className="miniNavBarGroup">
                 <DividerBar dividerObject={<span className="thinDivider"/>}>
+                    <StandardMenuButton to="/timeline">Timeline</StandardMenuButton>
                     <StandardMenuButton to="/featured_definitions">Featured Definitions</StandardMenuButton>
                     <StandardMenuButton to="/definitions">Definitions</StandardMenuButton>
                 </DividerBar>

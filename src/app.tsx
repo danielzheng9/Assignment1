@@ -253,6 +253,7 @@ export function App() {
                 <Routes>
                     {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
                     <Route path="/" element={<Home/>} />
+                    <Route path="/timeline" element={<Home scrollToBottom={true}/>} />
                     <Route path="/definitions/arpanet" element={<ArpanetPage/>} />
                     <Route path="/definitions/whatisnetworkbandwidth" element={<WhatIsNetworkBandwidth/>} />
                     <Route path="/definitions/decimal" element={<DecimalPage/>} />
