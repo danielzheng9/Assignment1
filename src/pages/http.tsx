@@ -29,5 +29,14 @@ export function HyperTextTransferProtocol() {
         <p>
             A GET method requests data from a specified resource.
         </p>
+        <p>
+            A POST method submits data to a specified resource.
+        </p>
+        <p>
+            A PUT method replaces data from a target source with the requested content.
+        </p>
+        <p>
+            A DELETE method removes the specified resource.
+        </p>
     </>
 }
