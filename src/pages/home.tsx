@@ -29,7 +29,10 @@ export function Home({scrollToBottom}: {scrollToBottom?: boolean}) {
                 <div className="timeline">
                 <TimelineYearCard yearDate="1960">Researchers developed packet switching networks. They aimed for data sharing, and communication that could survive attacks.</TimelineYearCard>
                 <TimelineYearCard yearDate="1965">Lawrence Roberts and Thomas Merril communicate with computers connected via a dial-up telephone in Massachusetts and California.</TimelineYearCard>
-                <TimelineYearCard yearDate="1969">ARPANET was the first packet switching network developed. It was funded by the US Defense Department, who linked computers at The University of California and Stanford</TimelineYearCard>
+                <TimelineYearCard yearDate="1969">
+                    ARPANET was the first packet switching network developed. It was funded by the US Defense Department, who linked computers at The University of California and Stanford
+                    <img className="behaveImage" src="https://miro.medium.com/v2/resize:fit:1400/1*-Bv0VQoZjpgew-fOmfNAWA.jpeg" alt="An image of the ARPANET logo laid on the ARPANET facility"/>
+                </TimelineYearCard>
                 <TimelineYearCard yearDate="1970">Unix time was established—it served as a live counter from the epoch: 01/01/1970 at 00:00:00 UTC. This laid the backbone for things like authentication and synchronisation. The date was chosen for the convenience of the engineers.</TimelineYearCard>
                 <TimelineYearCard yearDate="1993">
                     The Mosaic browser was created to make the World Wide Web accessible, user-friendly, and moving it beyond the text-only academic use.
@@ -72,6 +75,7 @@ export function Home({scrollToBottom}: {scrollToBottom?: boolean}) {
                     <p>
                         Peer to peer file sharing filled the media, Neopets was popularised.
                     </p>
+                    <img className="behaveImage" src="https://static.wikia.nocookie.net/godzilla/images/f/ff/Y2K_Bug_%281%29.png/revision/latest/scale-to-width-down/1200?cb=20160517031440" alt="The Y2K bug literally represented as a cockroach in a cartoon"/>
                 </TimelineYearCard>
                 <TimelineYearCard yearDate="2001-2010">
                     <p>Wikipedia launched. Apple iTunes launched. Broadband 3G was adopted over dial-up. Linkedn was launched.</p>
@@ -84,6 +88,7 @@ export function Home({scrollToBottom}: {scrollToBottom?: boolean}) {
                     <p>React was created in 2013. Google created AngularJS in 2010. Docker was created. HTTPS was the default standard due to the inherit vulnerable nature of HTTP</p>
                 </TimelineYearCard>
                 <TimelineYearCard yearDate="2015-2026">
+                    <div>
                     <p>Tailwind CSS was founded.</p>
                     <p>The European Union's General Data Protection Regulation described the necessity for cookie banners that ask what cookies to store on your device.</p>
                     <p>During the pandemic, COVID-19 sparked the internet even more—Zoom became a well known name. TikTok was fueled because of this.</p>
@@ -101,6 +106,8 @@ export function Home({scrollToBottom}: {scrollToBottom?: boolean}) {
                     <p>
                         5G was developed. 6G was standardised in 2026 and includes AI?
                     </p>
+                    </div>
+                    <img className="behaveImage" src="https://miro.medium.com/v2/resize:fit:1400/1*4Ggg7IjkwgDhEaXdr7EmtQ.png" alt="An indigo blue AI website"/>
                 </TimelineYearCard>
                 </div>
             </div>
