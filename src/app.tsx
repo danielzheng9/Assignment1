@@ -47,6 +47,7 @@ import { LossyAndLosslessCompression } from "./pages/lossyAndLosslessCompression
 import { IPAddressAndMACAddress } from "./pages/ipAddress.js";
 import { WhatIsMalware } from "./pages/whatIsMalware.js";
 import { Trojan } from "./pages/trojan.js";
+import { SocialEngineering } from "./pages/socialengineering.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -260,6 +261,13 @@ export function App() {
           linkTo: "/definitions/trojan",
           image: "https://www.cybereason.com/hs-fs/hubfs/image3-9.png?t=1536597487358&width=1410&name=image3-9.png",
           minutesToRead: 1
+     },
+     {
+          title: "Social Engineering",
+          description: "Not all malware comes from vulnerabilities or network worms",
+          linkTo: "/definitions/socialengineering",
+          image: "https://itso.hkust.edu.hk/sites/default/files/site-images/services/phishing_email1.png",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -316,6 +324,7 @@ export function App() {
                     <Route path="/definitions/internetportaddressandmediaaccesscontroladdress" element={<IPAddressAndMACAddress/>} />
                     <Route path="/definitions/whatismalware" element={<WhatIsMalware/>} />
                     <Route path="/definitions/trojan" element={<Trojan/>} />
+                    <Route path="/definitions/socialengineering" element={<SocialEngineering/>} />
                     <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                     <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                     <Route path="/login" element={<Login/>} />
