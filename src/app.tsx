@@ -46,6 +46,7 @@ import { HypertextMarkupLanguage } from "./pages/html.js";
 import { LossyAndLosslessCompression } from "./pages/lossyAndLosslessCompression.js";
 import { IPAddressAndMACAddress } from "./pages/ipAddress.js";
 import { WhatIsMalware } from "./pages/whatIsMalware.js";
+import { Trojan } from "./pages/trojan.js";
 export const AppContext = React.createContext<MyAppContext | undefined>(undefined);
 export function App() {
     // const [isPageNotFound, setIsPageNotFound] = useState<boolean>(false);
@@ -250,7 +251,15 @@ export function App() {
           title: "What is Malware?",
           description: "Your data has been leaked. Pay now.",
           linkTo: "/definitions/whatismalware",
-          image: "https://fedtechmagazine.com/sites/fedtechmagazine.com/files/styles/cdw_hero/public/articles/FedTech/201705/Screen-Shot-2017-05-16-at-2.55.43-PM_0.jpg?itok=OQrAnIBF"
+          image: "https://fedtechmagazine.com/sites/fedtechmagazine.com/files/styles/cdw_hero/public/articles/FedTech/201705/Screen-Shot-2017-05-16-at-2.55.43-PM_0.jpg?itok=OQrAnIBF",
+          minutesToRead: 2
+     },
+     {
+          title: "Trojan",
+          description: "A type of malware that hides, until it explodes.",
+          linkTo: "/definitions/trojan",
+          image: "https://www.cybereason.com/hs-fs/hubfs/image3-9.png?t=1536597487358&width=1410&name=image3-9.png",
+          minutesToRead: 1
      }
     ]);
     const [miniNavOpen, setMiniNavOpen] = useState<boolean>(false);
@@ -306,6 +315,7 @@ export function App() {
                     <Route path="/definitions/lossyandlosslesscompression" element={<LossyAndLosslessCompression/>} />
                     <Route path="/definitions/internetportaddressandmediaaccesscontroladdress" element={<IPAddressAndMACAddress/>} />
                     <Route path="/definitions/whatismalware" element={<WhatIsMalware/>} />
+                    <Route path="/definitions/trojan" element={<Trojan/>} />
                     <Route path="/definitions" element={<BlogsPage blogs={blogs}/>} />
                     <Route path="/featured_definitions" element={<FeaturedBlogs/>} />
                     <Route path="/login" element={<Login/>} />
